@@ -1,0 +1,12 @@
+[usae]
+	name = veloce
+[user]
+	name = Vincent Velociter
+	email = vincent.velociter@gmail.com
+[color]
+	ui = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
