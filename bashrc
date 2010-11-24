@@ -40,10 +40,28 @@ fi
 
 # some more ls aliases
 alias ll='ls -l'
-alias la='ls -A'
+alias la='ls -Al'   # show hidden files
+alias lx='ls -lXB'  # sort by extension
+alias lk='ls -lSr'  # sort by size, biggest last
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+alias h='history'
+
 alias clisp='clisp -q -modern'
 alias sf='php symfony'
 
 # Git completion
 source ~/.git-completion.bash
 
+# Find a file with a pattern in name:
+function ff() { find . -type f -iname '*'$*'*' -ls ; }
+
+# Find a file with pattern $1 in name and Execute $2 on it:
+function fe()
+{ find . -type f -iname '*'${1:-}'*' -exec ${2:-file} {} \;  ; }
+
+# enable auto-completion after those commands
+complete -cf sudo
+complete -cf man
