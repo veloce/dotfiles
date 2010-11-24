@@ -10,7 +10,7 @@
     background_darkness = 0.85
     background_type = transparent
     scrollbar_position = hidden
-    foreground_color = "#d8d8d8"
+    foreground_color = "#BFBFBF"
     icon_bell = False
     show_titlebar = False
     font = Monospace 10
