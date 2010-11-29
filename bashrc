@@ -13,6 +13,15 @@ HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoreboth
 
+# enable bash completion in interactive shells
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+# enable auto-completion after those commands
+#complete -cf sudo
+#complete -cf man
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -62,6 +71,3 @@ function ff() { find . -type f -iname '*'$*'*' -ls ; }
 function fe()
 { find . -type f -iname '*'${1:-}'*' -exec ${2:-file} {} \;  ; }
 
-# enable auto-completion after those commands
-complete -cf sudo
-complete -cf man
