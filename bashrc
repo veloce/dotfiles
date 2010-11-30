@@ -7,6 +7,9 @@ export EDITOR='vim'
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Prepend user bin directory to the path if it exists
+[ -d "$HOME/bin" ] && PATH=$HOME/bin:$PATH
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
@@ -17,10 +20,6 @@ HISTCONTROL=ignoreboth
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# enable auto-completion after those commands
-#complete -cf sudo
-#complete -cf man
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -55,6 +54,7 @@ alias lk='ls -lSr'  # sort by size, biggest last
 
 alias cp='cp -i'
 alias mv='mv -i'
+alias rm='rm -i'
 alias mkdir='mkdir -p'
 alias h='history'
 
@@ -71,3 +71,24 @@ function ff() { find . -type f -iname '*'$*'*' -ls ; }
 function fe()
 { find . -type f -iname '*'${1:-}'*' -exec ${2:-file} {} \;  ; }
 
+function extract()      # Handy Extract Program.
+{
+     if [ -f $1 ] ; then
+         case $1 in
+             *.tar.bz2)   tar xvjf $1     ;;
+             *.tar.gz)    tar xvzf $1     ;;
+             *.bz2)       bunzip2 $1      ;;
+             *.rar)       unrar x $1      ;;
+             *.gz)        gunzip $1       ;;
+             *.tar)       tar xvf $1      ;;
+             *.tbz2)      tar xvjf $1     ;;
+             *.tgz)       tar xvzf $1     ;;
+             *.zip)       unzip $1        ;;
+             *.Z)         uncompress $1   ;;
+             *.7z)        7z x $1         ;;
+             *)           echo "'$1' cannot be extracted via >extract<" ;;
+         esac
+     else
+         echo "'$1' is not a valid file"
+     fi
+}
