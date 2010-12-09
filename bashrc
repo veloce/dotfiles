@@ -71,3 +71,5 @@ function ff() { find . -type f -iname '*'$*'*' -ls ; }
 function fe()
 { find . -type f -iname '*'${1:-}'*' -exec ${2:-file} {} \;  ; }
 
+# Display a random adage each time bash is called
+[ -x /usr/games/fortune ] && [ -x /usr/games/cowsay ] && fortune | cowsay
