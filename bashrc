@@ -101,7 +101,8 @@ function extract()
      fi
 }
 
-function man()
+# Open man pages in vim
+function vman()
 {
     vim -R -c "Man $1" -c "only"
 }
