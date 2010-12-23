@@ -142,4 +142,5 @@ let g:CommandTMaxFiles = 30000  " Increase cache size
 " Detect twig filetype
 au BufNewFile,BufRead *.twig setf htmljinja
 
+" Allow to load man pages in vim
 runtime! ftplugin/man.vim

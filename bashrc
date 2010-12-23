@@ -103,7 +103,7 @@ function extract()
 
 function man()
 {
-    vim -R -c "Man $1" -c "wincmd o"
+    vim -R -c "Man $1" -c "only"
 }
 
 # Display a random adage each time bash is called
