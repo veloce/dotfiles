@@ -10,7 +10,7 @@ syntax on
 set t_Co=256
 colorscheme aldmeris256
 
-set history=1000
+set history=50                        " Remember 50 lines of cmd history
 set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
 set wildmode=list:longest             
