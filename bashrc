@@ -101,5 +101,10 @@ function extract()
      fi
 }
 
+function man()
+{
+    vim -R -c "Man $1" -c "wincmd o"
+}
+
 # Display a random adage each time bash is called
 [ -x /usr/games/fortune ] && [ -x /usr/games/cowsay ] && fortune | cowsay
