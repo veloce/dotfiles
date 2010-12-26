@@ -61,13 +61,6 @@ alias h='history'
 alias clisp='clisp -q -modern'
 alias sf='php symfony'
 
-# Git submodule shortcuts
-alias subupdate='git submodule sync && git submodule update --init --recursive'
-alias subcheckout='git submodule foreach git checkout master'
-alias subreset='git submodule foreach --recursive git checkout -- . && git submodule foreach --recursive git clean -f'
-alias subpull='git submodule foreach git pull'
-alias subdiff='git submodule foreach --recursive git diff'
-
 # Git completion
 source ~/.git-completion.bash
 
@@ -104,7 +97,7 @@ function extract()
 # Open man pages in vim
 function vman()
 {
-    vim -R -c "Man $1" -c "only"
+    vim -XM -c "Man $1" -c "only"
 }
 
 # Display a random adage each time bash is called

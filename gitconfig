@@ -5,8 +5,13 @@
 	email = vincent.velociter@gmail.com
 [color]
 	ui = true
+[core]
+    editor = vim -X
 [alias]
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
+    subpull = !"git submodule foreach git pull"
+    subupdate = !"git submodule sync && git submodule update --init --recursive"
+    subcheckout = !"git submodule foreach git checkout master"

@@ -77,12 +77,6 @@ autocmd BufWritePre *.php,*.c,*.py,*.js,*.twig,*.html,*.xml,*.css :call <SID>Str
 " lowercase to camelCase 
 nnoremap <leader>_ bf_x~
 
-" Change cursor color in terminal
-if &term =~ "xterm"
-    let &t_SI = "\<Esc>]12;orange\x7"
-    let &t_EI = "\<Esc>]12;white\x7"
-endif
-
 " supertab
 "let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabLeadingSpaceCompletion = 0
