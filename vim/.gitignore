@@ -1,2 +1,3 @@
-tmp/*
-backup/*
+*.swp
+.netrwhist
+tags
