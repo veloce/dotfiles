@@ -16,9 +16,6 @@
 [submodule "vim/bundle/surround"]
 	path = vim/bundle/surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/taglist"]
-	path = vim/bundle/taglist
-	url = http://github.com/nowk/vim-taglist.git
 [submodule "vim/bundle/unimpaired"]
 	path = vim/bundle/unimpaired
 	url = http://github.com/tpope/vim-unimpaired.git
@@ -43,3 +40,6 @@
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/ragtag"]
+	path = vim/bundle/ragtag
+	url = https://github.com/tpope/vim-ragtag.git
