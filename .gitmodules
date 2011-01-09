@@ -43,3 +43,6 @@
 [submodule "vim/bundle/ragtag"]
 	path = vim/bundle/ragtag
 	url = https://github.com/tpope/vim-ragtag.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = git@github.com:veloce/oh-my-zsh.git
