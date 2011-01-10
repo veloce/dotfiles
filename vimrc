@@ -107,7 +107,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " CTAGS 
-nnoremap <silent> <C-F7> :silent !ctags-exuberant -h ".php" --PHP-kinds=+cf --recurse --exclude=*/cache/* --exclude=*/logs/* --exclude=*/data/* --exclude="\.git" --exclude="\.svn" --languages=PHP<cr>
+nnoremap <silent> <C-F7> :silent !ctags-exuberant -h ".php" --PHP-kinds="+cf" --recurse --exclude="*/cache/*" --exclude="*/logs/*" --exclude="*/data/*" --exclude="\.git" --exclude="\.svn" --languages="PHP"<cr>
 
 " taglist plugin
 let Tlist_Show_One_File = 1
