@@ -6,4 +6,4 @@ set guioptions-=m
 set guioptions-=r 
 
 colorscheme aldmeris
-set gfn=Inconsolata\ 14
+set gfn=Inconsolata\ 12
