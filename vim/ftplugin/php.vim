@@ -1,6 +1,9 @@
 " Indent PHP templates as HTML files
 nmap <leader>= :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
+" special indent settings
+au BufNewFile,BufRead *.class.php setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 " Exclude some syntax group from the completion list
 let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
@@ -9,8 +12,6 @@ imap jj ->
 
 " phpdoc
 nnoremap <C-S-D> :call PhpDocSingle()<CR> 
-"inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-"vnoremap <C-P> :call PhpDocRange()<CR> 
 let g:pdv_cfg_Author = "Vincent Velociter"
 
 "Folding
@@ -18,9 +19,6 @@ nmap <buffer> <F5> <Esc>:EnableFastPHPFolds<Cr>
 nmap <buffer> <C-F5> <Esc>:EnablePHPFolds<Cr>
 nmap <buffer> <F6> <Esc>:DisablePHPFolds<Cr>
 let g:DisableAutoPHPFolding = 1
-
-" special indent settings
-au BufNewFile,BufRead *.class.php setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 "PHP Colors
 hi link phpVarSelector Identifier
