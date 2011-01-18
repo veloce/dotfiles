@@ -2,7 +2,6 @@ snippet php
 	<?php ${1} ?>
 snippet phpe
 	<?php echo ${1} ?>
-
 snippet fun
 	/**
 	 * ${4:undocumented function}
@@ -13,7 +12,7 @@ snippet fun
 	{
 		${6}
 	}
-snippet priv
+snippet ppriv
 	/**
 	 * ${3:undocumented class variable}
 	 *
@@ -38,7 +37,7 @@ snippet priv
 	{
 	  $this->$1 = $$1;
 	}
-snippet pro
+snippet ppro
 	/**
 	 * ${3:undocumented class variable}
 	 *
@@ -82,7 +81,5 @@ snippet elseif
 	elseif (${1:/* condition */}) {
 		${2}
 	}
-
-# debug
 snippet vd
 	var_dump(${1:var});${2}
