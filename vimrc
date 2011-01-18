@@ -49,15 +49,15 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" launch help in vert mode
-nmap <leader>h :vert help 
+" easy switch for indent spaces
+nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
+nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
 
 " indent whole file
 nmap <leader>i <Esc>mygg=G'y
 
-" easy switch for indent spaces
-nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
-nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
+" launch help in vert mode
+nmap <leader>h :vert help 
 
 " Strip trailing whitespaces
 function! <SID>StripTrailingWhitespaces()

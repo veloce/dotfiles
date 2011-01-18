@@ -19,6 +19,9 @@ nmap <buffer> <C-F5> <Esc>:EnablePHPFolds<Cr>
 nmap <buffer> <F6> <Esc>:DisablePHPFolds<Cr>
 let g:DisableAutoPHPFolding = 1
 
+" special indent settings
+au BufNewFile,BufRead *.class.php setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 "PHP Colors
 hi link phpVarSelector Identifier
 hi link phpIdentifier Identifier
