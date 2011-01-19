@@ -74,8 +74,11 @@ endfunction
 command! StripTWS call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.php,*.c,*.py,*.js,*.twig,*.html,*.xml,*.css :call <SID>StripTrailingWhitespaces()
 
-" lowercase to camelCase 
-nnoremap <leader>_ bf_x~
+" Diff config
+if &diff
+    nmap <leader>do :diffget<space>
+    nmap <leader>dp :diffput<space>
+endif
 
 " supertab
 "let g:SuperTabDefaultCompletionType = "context"
