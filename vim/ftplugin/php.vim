@@ -1,9 +1,6 @@
 " Indent PHP templates as HTML files
 nmap <leader>= :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
-" special indent settings
-au BufNewFile,BufRead *.class.php setlocal tabstop=2 shiftwidth=2 softtabstop=2
-
 " Exclude some syntax group from the completion list
 let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
