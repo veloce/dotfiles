@@ -9,33 +9,22 @@ export ZSH_THEME="veloce"
 # export CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+export DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # export DISABLE_LS_COLORS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
-# enable vi mode
-set -o vi
-
 # My favourite editor
 export EDITOR='vim'
+export GIT_EDITOR='vim -X'
 
-alias la='ls -Al'   # show hidden files
-alias lx='ls -lXB'  # sort by extension
-alias lk='ls -lSr'  # sort by size, biggest last
-
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
 alias mkdir='mkdir -p'
-alias h='history'
-
 alias clisp='clisp -q -modern'
 alias sf='php symfony'
 
