@@ -4,9 +4,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = http://github.com/ervandew/supertab.git
-[submodule "vim/bundle/snipmate"]
-	path = vim/bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
