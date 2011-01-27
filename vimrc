@@ -14,7 +14,7 @@ set history=50                        " Remember 50 lines of cmd history
 set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
 set wildmode=list:longest             
-set wildignore=*/cache/**,*/logs/**
+set wildignore+=*/cache/**,*/logs/**
 
 set ignorecase                        " Case-insensitive searching.
 set smartcase                         " But case-sensitive if expression contains a capital letter.
