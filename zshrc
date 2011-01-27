@@ -61,7 +61,7 @@ function extract()
 # Open man pages in vim
 function vman()
 {
-    vim -XM -c "Man $1" -c "only"
+    vim -XM "+runtime! ftplugin/man.vim" "+Man $1" "+only"
 }
 
 # Display a random adage each time bash is called
