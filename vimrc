@@ -105,7 +105,7 @@ function! <SID>SynStack()
 endfunc
 
 " Lusty
-map <leader>lp :LustyJugglePrevious<cr>
+map <leader>la :LustyJugglePrevious<cr>
 let g:LustyJugglerShowKeys = 0
 
 " Faster viewport scrolling
