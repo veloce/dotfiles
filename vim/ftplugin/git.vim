@@ -1,5 +1,5 @@
 " Insert a blank line and start insert mode
-1s/^$//e
+1s/^$/\r/e
 goto 1
 startinsert
 
