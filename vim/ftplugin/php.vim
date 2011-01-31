@@ -1,5 +1,5 @@
 " Indent PHP templates as HTML files
-nmap <leader>= :set ft=html<cr>mhgg=G'h:set ft=php<cr>
+nmap <leader>hi :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
 " Exclude some syntax group from the completion list
 let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
