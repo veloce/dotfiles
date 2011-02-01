@@ -20,6 +20,9 @@ plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+# enable ^R for searching history
+bindkey '^R' history-incremental-search-backward
+
 # My favourite editor
 export EDITOR='vim'
 export GIT_EDITOR='vim -X'
