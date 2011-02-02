@@ -37,7 +37,6 @@ set showmode
 set cmdheight=2                       " command bar height
 set number
 
-set gdefault                          " Always replace all occurences of a line
 set nostartofline                     " Stop certain movements from always going to the first character of a line.
 
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
