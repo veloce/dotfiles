@@ -28,9 +28,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim/bundle/colorsupport"]
-	path = vim/bundle/colorsupport
-	url = https://github.com/vim-scripts/colorsupport.vim.git
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
