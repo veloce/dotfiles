@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.twig.html set filetype=htmljinja
+au BufNewFile,BufRead *.twig set filetype=htmljinja
