@@ -60,8 +60,9 @@ nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
 " indent whole file
 nmap <leader>= <Esc>mygg=G'y
 
-" launch help in vert mode
-nmap <leader>h :vert help 
+" launch help in vert mode split to the right window
+nmap <leader>h :botright vert help 
+
 
 " Strip trailing whitespaces
 function! <SID>StripTrailingWhitespaces()
@@ -85,7 +86,7 @@ if &diff
 endif
 
 " supertab
-"let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = context
 let g:SuperTabLeadingSpaceCompletion = 0
 
 " syntastic options
