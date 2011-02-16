@@ -1,0 +1,27 @@
+! Fonts {{{
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintfull
+! }}}
+
+! Urxvt {{{
+urxvt.font:  xft:Inconsolata:size=12
+
+URxvt*scrollBar:  false
+URxvt*jumpScroll: true
+URxvt*skipScroll: true
+URxvt*saveLines:  20000
+URxvt*visualBell: false
+
+URxvt*depth:       24
+URxvt*buffered:    true
+URxvt*foreground:  #f0f0f0
+URxvt*background:  #101010
+URxvt*transparent: false
+URxvt*shading:     100
+
+URxvt*intensityStyles: true
+URxvt*urgentOnBell:    true
+
+URxvt*cursorBlink:     true
