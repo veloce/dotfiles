@@ -12,7 +12,7 @@ colorscheme desert256
 
 set encoding=utf-8
 
-set history=50                        " Remember 50 lines of cmd history
+set history=100                       " nb of cmd history lines
 set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
 set wildmode=list:longest             
