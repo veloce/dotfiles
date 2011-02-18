@@ -135,6 +135,9 @@ nmap <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " read files in the same directory as the current file
 nmap <leader>rw :r <C-R>=expand("%:p:h") . "/" <CR>
 
+" rename in the current directory
+nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
+
 " ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --type-add html=twig --ignore-dir=cache --ignore-dir=logs"
 
