@@ -29,6 +29,7 @@ alias h='history'
 alias mkdir='mkdir -p'
 alias clisp='clisp -q -modern'
 alias sf='php symfony'
+alias s='git status'
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
