@@ -1,1 +1,0 @@
-../../../www-dev/vim-aldmeris/colors/aldmeris.vim

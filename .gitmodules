@@ -46,3 +46,6 @@
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git@github.com:veloce/snipmate.vim.git
+[submodule "vim/bundle/vim-aldmeris"]
+	path = vim/bundle/vim-aldmeris
+	url = git@github.com:veloce/vim-aldmeris.git
