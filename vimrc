@@ -8,7 +8,7 @@ filetype indent plugin on
 syntax on
 
 set t_Co=256
-colorscheme aldmeris256
+colorscheme darkeraldmeris256
 
 set encoding=utf-8
 
