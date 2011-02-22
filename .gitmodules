@@ -49,3 +49,6 @@
 [submodule "vim/bundle/vim-aldmeris"]
 	path = vim/bundle/vim-aldmeris
 	url = git@github.com:veloce/vim-aldmeris.git
+[submodule "vim/bundle/vim-git"]
+	path = vim/bundle/vim-git
+	url = https://github.com/tpope/vim-git.git
