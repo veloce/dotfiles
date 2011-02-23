@@ -23,9 +23,13 @@ bindkey '^R' history-incremental-search-backward
 # Prepend user bin directory to the path if it exists
 [ -d "$HOME/bin" ] && PATH=$HOME/bin:$PATH
 
+# for node.js
+[ -d "$HOME/local/node/bin" ] && PATH=$HOME/local/node/bin:$PATH
+
 # My favourite editor
 export EDITOR='vim'
 export GIT_EDITOR='vim'
+export BROWSER='chromium-browser'
 
 # some aliases
 alias h='history'
