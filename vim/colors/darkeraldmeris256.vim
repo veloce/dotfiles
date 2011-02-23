@@ -3,7 +3,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-hi Normal guibg=#161718 guifg=#babdb6 ctermfg=250 ctermbg=233
+hi Normal guibg=#1d1f1f guifg=#babdb6 ctermfg=250 ctermbg=234
 hi link htmlH1 Normal
 hi link htmlH2 Normal
 hi link htmlH3 Normal
@@ -62,14 +62,14 @@ hi Cursor guibg=#babdb6 guifg=#000000 ctermfg=16 ctermbg=250
 hi CursorLine guibg=#2e3436 guifg=NONE ctermfg=NONE ctermbg=0
 hi CursorColumn guibg=#464646 guifg=NONE ctermfg=NONE ctermbg=238
 hi MatchParen guibg=#ad7fa8 guifg=#FFFFFF ctermfg=231 ctermbg=13
-hi Visual guibg=#888a85 guifg=#2e3436 ctermfg=0 ctermbg=102
+hi Visual guibg=#888a85 guifg=#eeeeec ctermfg=15 ctermbg=102
 hi LineNr guibg=#000000 guifg=#555753 ctermfg=8 ctermbg=16
 hi Folded guibg=NONE guifg=#e9b96e ctermfg=179 ctermbg=NONE
 hi Directory guibg=NONE guifg=#729fcf gui=bold cterm=bold ctermfg=12 ctermbg=NONE
 hi clear Search
 hi Search guibg=#4e9a06 guifg=#eeeeec ctermfg=15 ctermbg=2
-hi NonText guifg=#555753 ctermfg=8
-hi SpecialKey guifg=#555753 ctermfg=8
+hi NonText guibg=NONE guifg=#2e3436 ctermfg=0 ctermbg=NONE
+hi SpecialKey guibg=NONE guifg=#2e3436 ctermfg=0 ctermbg=NONE
 hi Pmenu guibg=#000000 guifg=#c0c0c0 ctermfg=250 ctermbg=16
 hi PmenuSel guibg=#555753 guifg=#ffffff ctermfg=231 ctermbg=8
 hi PmenuSbar guibg=#444444 guifg=#444444 ctermfg=238 ctermbg=238
