@@ -1,5 +1,5 @@
 " Indent PHP templates as HTML files
-nmap <leader>hi :set ft=html<cr>mhgg=G'h:set ft=php<cr>
+nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
 " enable syntax code completion
 setlocal omnifunc=syntaxcomplete#Complete
