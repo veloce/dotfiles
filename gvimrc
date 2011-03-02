@@ -2,8 +2,9 @@
 set guioptions-=T
 " remove menu bar
 set guioptions-=m
-" Don't show right scrollbar
-set guioptions-=r 
+" Don't show scrollbars
+set guioptions-=r
+set guioptions-=l
 
 colorscheme aldmeris
 if &l:diff
