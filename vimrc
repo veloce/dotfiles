@@ -144,3 +144,6 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column --type-add html=twig --ig
 
 " CommandT
 let g:CommandTMaxFiles = 30000  " Increase cache size
+
+" indents guides
+let g:indent_guides_guide_size = 1
