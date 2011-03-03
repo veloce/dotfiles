@@ -47,14 +47,20 @@ if [ -x /usr/bin/dircolors ] || [ -x /bin/dircolors ]; then
 fi
 
 # some more ls aliases
+alias l='ls -Al'
 alias ll='ls -l'
-alias la='ls -Al'   # show hidden files
+alias la='ls -a'   # show hidden files
 alias lx='ls -lXB'  # sort by extension
 alias lk='ls -lSr'  # sort by size, biggest last
 
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
+# git aliases
+alias g='git'
+alias s='git status'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit -v'
+alias gco='git checkout'
+
 alias mkdir='mkdir -p'
 alias h='history'
 
