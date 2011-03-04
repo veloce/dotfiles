@@ -35,7 +35,7 @@ shopt -s checkwinsize
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1="\w\$(parse_git_branch) $ "
+PS1="\[\033[1;34m\]\w\$(parse_git_branch) $\[\033[0m\] "
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ] || [ -x /bin/dircolors ]; then
