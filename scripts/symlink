@@ -1,0 +1,20 @@
+#!/bin/sh
+
+link (){
+    FROM="$HOME/.dotfiles/$1"
+    TO="$HOME/.$1"
+
+    rm -f $TO
+    ln -s $FROM $TO
+}
+
+cd ~/.dotfiles
+
+link bashrc
+link gitconfig
+link vim
+link vimrc
+link gvimrc
+link Xdefaults
+link ackrc
+link git-completion.bash
