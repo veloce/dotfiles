@@ -1,31 +1,11 @@
 # enable vi mode
 set -o vi
 
-# My favourite editor
-export EDITOR='vim'
-
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
-
-# Prepend user bin directory to the path if it exists
-[ -d "$HOME/bin" ] && PATH=$HOME/bin:$PATH
-
-# don't put duplicate lines in the history. See bash(1) for more options
-# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
-HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoreboth
-
-# enable bash completion in interactive shells
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-# append to the history file, don't overwrite it
+# history
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
 shopt -s histappend
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -107,4 +87,4 @@ function vman()
 }
 
 # Display a random adage each time bash is called
-[ -x /usr/games/fortune ] && [ -x /usr/games/cowsay ] && fortune | cowsay
+[ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
