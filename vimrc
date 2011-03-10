@@ -98,7 +98,6 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " Show syntax highlighting groups for word under cursor
-" see vimcast.org/episodes/creating-colorschemes-for-vim/
 nnoremap <C-F8> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
@@ -139,8 +138,8 @@ nmap <leader>rw :r <C-R>=expand("%:p:h") . "/" <CR>
 " rename in the current directory
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 
-" ack
-let g:ackprg="ack-grep -H --nocolor --nogroup --column --type-add html=twig --ignore-dir=cache --ignore-dir=logs"
+" Ack
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=base --ignore-dir=vendor"
 
 " CommandT
 let g:CommandTMaxFiles = 30000  " Increase cache size
