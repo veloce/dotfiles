@@ -88,3 +88,6 @@ function vman()
 
 # Display a random adage each time bash is called
 [ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
+
+# for node.js
+[ -d "$HOME/local/node/bin" ] && PATH=$HOME/local/node/bin:$PATH
