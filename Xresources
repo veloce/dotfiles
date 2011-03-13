@@ -1,4 +1,0 @@
-URxvt.perl-ext:      default,url-select
-URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.urlLauncher:   chromium
-URxvt.underlineURLs: true
