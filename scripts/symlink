@@ -1,21 +1,16 @@
 #!/bin/sh
 
 link (){
-    FROM="$HOME/.dotfiles/$1"
-    TO="$HOME/.$1"
-
-    rm -f $TO
-    ln -s $FROM $TO
+    rm -f $2
+    ln -s $1 $2
 }
 
-cd ~/.dotfiles
-
-link bashrc
-link gitconfig
-link vim
-link vimrc
-link gvimrc
-link Xdefaults
-link ackrc
-link git-completion.bash
-link tmux.conf
+link ~/.dotfiles/bashrc ~/.bashrc
+link ~/.dotfiles/gitconfig ~/.gitconfig
+link ~/.dotfiles/vim ~/.vim
+link ~/.dotfiles/vimrc ~/.vimrc
+link ~/.dotfiles/gvimrc ~/.gvimrc
+link ~/.dotfiles/Xdefaults ~/.Xdefaults
+link ~/.dotfiles/ackrc ~/.ackrc
+link ~/.dotfiles/git-completion.bash ~/.git-completion.bash
+link ~/.dotfiles/tmux.conf ~/.tmux.conf
