@@ -19,3 +19,4 @@ link Xdefaults
 link ackrc
 link git-completion.bash
 link Xresources
+link tmux.conf
