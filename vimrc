@@ -59,26 +59,10 @@ nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
 nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
 
 " indent whole file
-nmap <leader>= <Esc>mygg=G'y
+nmap <leader>= <Esc>mygg=G`y
 
 " launch help in vert mode split to the right window
 nmap <leader>h :botright vert help 
-
-
-" Strip trailing whitespaces
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
-command! StripTWS call <SID>StripTrailingWhitespaces()
-autocmd BufWritePre *.php,*.c,*.py,*.js,*.twig,*.html,*.xml,*.css :call <SID>StripTrailingWhitespaces()
 
 " Diff config
 if &diff
@@ -97,52 +81,33 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" Show syntax highlighting groups for word under cursor
-nnoremap <C-F8> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
-" Lusty
-map <leader>lp :LustyJugglePrevious<cr>
-let g:LustyJugglerShowKeys = 0
-
 " Faster viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-" CTAGS 
-nnoremap <silent> <C-F7> :silent !ctags-exuberant -h ".php" --PHP-kinds="+cf" --recurse --exclude="*/cache/*" --exclude="*/logs/*" --exclude="*/data/*" --exclude="\.git" --exclude="\.svn" --languages="PHP"<cr>
+" Go to previous buffer
+map <leader>\ <C-^>
 
-" taglist plugin
-let Tlist_Show_One_File = 1
-let Tlist_Sort_Type = "name"
-
-" Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
+" Map Y to yank until EOL, rather than act as yy,
 map Y y$
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" open files in the same directory as the current file (see vimcasts.org)
-nmap <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
-nmap <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" read files in the same directory as the current file
-nmap <leader>rw :r <C-R>=expand("%:p:h") . "/" <CR>
-
-" rename in the current directory
+" edit, read or rename files in the current directory of the buffer
+nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
+
+" Lusty
+let g:LustyJugglerShowKeys = 0
 
 " Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=base --ignore-dir=vendor"
 
 " CommandT
-let g:CommandTMaxFiles = 30000  " Increase cache size
+let g:CommandTMaxFiles = 30000
 
 " indents guides
 let g:indent_guides_guide_size = 1
@@ -156,3 +121,28 @@ com! -nargs=1 Qfdofile try | sil cfirst |
 \ while 1 | exec <q-args> | sil cnf | endwhile |
 \ catch /^Vim\%((\a\+)\)\=:E\%(553\|42\):/ |
 \ endtry
+
+" Strip trailing whitespaces
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+command! StripTWS call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.twig,*.html,*.xml,*.css :call <SID>StripTrailingWhitespaces()
+
+" Show syntax highlighting groups for word under cursor
+nnoremap <C-F8> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
