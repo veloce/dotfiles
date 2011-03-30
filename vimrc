@@ -68,6 +68,8 @@ nmap <leader>h :botright vert help
 if &diff
     nmap <leader>do :diffget<space>
     nmap <leader>dp :diffput<space>
+    nmap <leader>gl :diffget LOCAL<CR>
+    nmap <leader>gr :diffget REMOTE<CR>
 endif
 
 " supertab
@@ -105,6 +107,7 @@ let g:LustyJugglerShowKeys = 0
 
 " Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=base --ignore-dir=vendor"
+nmap <leader>a :Ack <C-R><C-W><CR>
 
 " CommandT
 let g:CommandTMaxFiles = 30000
@@ -146,3 +149,12 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+" Show differences between buffer and saved versions of a file
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
