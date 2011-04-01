@@ -158,3 +158,18 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+" Solarized function to toggle background
+function! ToggleBackground()
+    if (g:solarized_style=="dark")
+    let g:solarized_style="light"
+    colorscheme solarized
+else
+    let g:solarized_style="dark"
+    colorscheme solarized
+endif
+endfunction
+command! Togbg call ToggleBackground()
+nnoremap <F4> :call ToggleBackground()<CR>
+inoremap <F4> <ESC>:call ToggleBackground()<CR>a
+vnoremap <F4> <ESC>:call ToggleBackground()<CR>
