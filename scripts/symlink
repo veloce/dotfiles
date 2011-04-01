@@ -14,3 +14,4 @@ link ~/.dotfiles/Xdefaults ~/.Xdefaults
 link ~/.dotfiles/ackrc ~/.ackrc
 link ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 link ~/.dotfiles/tmux.conf ~/.tmux.conf
+link ~/.dotfiles/xcolors ~/.xcolors
