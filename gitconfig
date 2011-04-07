@@ -5,6 +5,10 @@
     email = vincent.velociter@gmail.com
 [color]
     ui = true
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
 [core]
     editor = vim
 [alias]
