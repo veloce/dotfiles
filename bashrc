@@ -46,6 +46,7 @@ alias h='history'
 
 alias clisp='clisp -q -modern'
 alias sf='php symfony'
+alias p='python'
 
 # Git completion
 source ~/.git-completion.bash
