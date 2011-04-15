@@ -46,6 +46,7 @@ alias h='history'
 
 alias clisp='clisp -q -modern'
 alias sf='php symfony'
+alias p='python'
 
 # Git completion
 source ~/.git-completion.bash
@@ -91,3 +92,5 @@ function vman()
 
 # for node.js
 [ -d "$HOME/local/node/bin" ] && PATH=$HOME/local/node/bin:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
