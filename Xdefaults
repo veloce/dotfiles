@@ -1,20 +1,21 @@
 !---------------------------------------
 ! file: ~/.Xdefaults
 ! author: Vincent Velociter
-! vim:ft=xdefaults
+! vim:ft=xdefaults:fdm=marker
 ! --------------------------------------
 
 
 ! -- Colorscheme -- !
 #include ".xcolors/tango"
 
-! -- Fonts -- !
+! -- Fonts {{{
 Xft.antialias:     true
 Xft.hinting:       true
 Xft.rgba:          rgb
 Xft.hintstyle:     hintfull
+! }}}
 
-! -- Urxvt -- !
+! Urxvt {{{
 URxvt.font:        xft:Inconsolata:size=12
 
 URxvt.scrollBar:   false
@@ -40,3 +41,4 @@ URxvt.perl-ext:      default,selection,url-select
 URxvt.keysym.M-u:    perl:url-select:select_next
 URxvt.urlLauncher:   chromium
 URxvt.underlineURLs: true
+! }}}
