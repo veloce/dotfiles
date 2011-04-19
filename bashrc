@@ -48,6 +48,9 @@ alias clisp='clisp -q -modern'
 alias sf='php symfony'
 alias p='python'
 
+# Ctags
+alias phptags="ctags -h '.php' --totals=yes --tag-relative=yes --PHP-kinds=+cf --fields=+afkst --recurse --exclude='*/cache/*' --exclude='*/logs/*' --exclude='*/data/*' --exclude='\.git' --exclude='\.svn' --exclude='*/swiftmailer/*' --exclude='*/zend/*' --exclude='*/bootstrap.*' --languages=PHP"
+
 # Git completion
 source ~/.git-completion.bash
 

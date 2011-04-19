@@ -32,7 +32,3 @@ hi link phpNumber Number
 hi link htmlTag Normal
 hi link htmlTagName Normal
 hi link htmlEndTag Normal
-
-" CTAGS 
-nnoremap <silent> <C-F7> :silent !ctags -h ".php" --PHP-kinds="+cf" --recurse --exclude="*/cache/*" --exclude="*/logs/*" --exclude="*/data/*" --exclude="\.git" --exclude="\.svn" --languages="PHP"<cr>
-
