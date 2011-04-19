@@ -159,6 +159,4 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
-nmap <unique> <F4> <Plug>ToggleBackground
-imap <unique> <F4> <Plug>ToggleBackground
-vmap <unique> <F4> <Plug>ToggleBackground
+call togglebg#map("<F4>")
