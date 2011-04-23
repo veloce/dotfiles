@@ -48,11 +48,13 @@ alias clisp='clisp -q -modern'
 alias sf='php symfony'
 alias p='python'
 
-# Ctags
-alias phptags="ctags -h '.php' --totals=yes --tag-relative=yes --PHP-kinds=cidf --fields=+ain --recurse --exclude='*/cache/*' --exclude='*/logs/*' --exclude='*/data/*' --exclude='\.git' --exclude='\.svn' --exclude='*/swiftmailer/*' --exclude='*/zend/*' --exclude='*/bootstrap.*' --languages=PHP"
-
 # Git completion
 source ~/.git-completion.bash
+
+# Display a random adage each time bash is called
+[ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
@@ -90,10 +92,9 @@ function vman()
     vim -XM -c "Man $1" -c "only"
 }
 
-# Display a random adage each time bash is called
-[ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
+# Ctags
+function phptags()
+{ 
+    ctags -h '.php' --totals=yes --tag-relative=yes --PHP-kinds=cidf --fields=+ain --recurse --exclude='*/cache/*' --exclude='*/logs/*' --exclude='*/data/*' --exclude='\.git' --exclude='\.svn' --exclude='*/swiftmailer/*' --exclude='*/zend/*' --exclude='*/bootstrap.*' --languages=PHP
+}
 
-# for node.js
-[ -d "$HOME/local/node/bin" ] && PATH=$HOME/local/node/bin:$PATH
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
