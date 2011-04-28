@@ -159,4 +159,8 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
+" solarized toggle background function
 call togglebg#map("<F4>")
+
+" a simple macro to re-generate id entries in messages.xml files
+let @r='f=ll"tyi"%jf=lvi""tp^'
