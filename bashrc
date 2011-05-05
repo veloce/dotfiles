@@ -54,8 +54,6 @@ source ~/.git-completion.bash
 # Display a random adage each time bash is called
 [ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
 
