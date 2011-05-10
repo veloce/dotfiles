@@ -22,9 +22,6 @@
 [submodule "vim/bundle/phpfolding"]
 	path = vim/bundle/phpfolding
 	url = http://github.com/vim-scripts/phpfolding.vim.git
-[submodule "vim/bundle/dirdo"]
-	path = vim/bundle/dirdo
-	url = http://github.com/ornicar/vim-dirdo.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
