@@ -17,7 +17,8 @@
     ci = commit
     st = status
     subpull = !"git submodule foreach git checkout master && git submodule foreach git pull"
-    subupdate = !"git submodule sync && git submodule update --init --recursive"
+    submerge = !"git submodule update --merge"
+    subupdate = !"git submodule sync && git submodule update --init"
     subcheckout = !"git submodule foreach git checkout master"
     subreset = !"git submodule foreach --recursive git checkout -- . && git submodule foreach --recursive git clean -f"
 [merge]
