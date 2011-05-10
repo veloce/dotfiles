@@ -10,7 +10,7 @@
     changed = yellow
     untracked = red
 [core]
-    editor = vim
+    editor = vim -u vimrc_git -X
 [alias]
     co = checkout
     br = branch

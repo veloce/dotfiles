@@ -9,6 +9,7 @@ link ~/.dotfiles/bashrc ~/.bashrc
 link ~/.dotfiles/gitconfig ~/.gitconfig
 link ~/.dotfiles/vim ~/.vim
 link ~/.dotfiles/vimrc ~/.vimrc
+link ~/.dotfiles/vimrc_git ~/.vimrc_git
 link ~/.dotfiles/gvimrc ~/.gvimrc
 link ~/.dotfiles/Xdefaults ~/.Xdefaults
 link ~/.dotfiles/ackrc ~/.ackrc
