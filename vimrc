@@ -17,7 +17,7 @@ set history=100                       " nb of cmd history lines
 set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
 set wildmode=list:longest             
-set wildignore+=*/cache/**,*/logs/**
+set wildignore+=*/cache/**,*/logs/**,*.pyc
 
 set ignorecase                        " Case-insensitive searching.
 set smartcase                         " But case-sensitive if expression contains a capital letter.
