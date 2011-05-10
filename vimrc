@@ -141,7 +141,7 @@ command! StripTWS call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.twig,*.html,*.xml,*.css :call <SID>StripTrailingWhitespaces()
 
 " Show syntax highlighting groups for word under cursor
-nnoremap <C-F8> :call <SID>SynStack()<CR>
+nnoremap <F8> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
