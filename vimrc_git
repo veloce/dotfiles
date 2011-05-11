@@ -27,3 +27,5 @@ set nowritebackup
 set noswapfile
 
 set number
+set laststatus=2
+set statusline=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
