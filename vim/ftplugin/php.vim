@@ -6,10 +6,10 @@ setlocal omnifunc=syntaxcomplete#Complete
 let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
 " fast arrow
-imap jj ->
+imap <buffer> jj ->
 
 " phpdoc
-nnoremap <C-S-D> :call PhpDocSingle()<CR> 
+nnoremap <C-P> :call PhpDocSingle()<CR> 
 let g:pdv_cfg_Author = "Vincent Velociter"
 
 "Folding
