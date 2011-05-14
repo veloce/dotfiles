@@ -1,9 +1,10 @@
 " Vincent Velociter - vimrc
 
+set nocompatible                      " this should be the first
+
 call pathogen#infect()
 call pathogen#helptags()
 
-set nocompatible
 filetype indent plugin on
 syntax on
 
