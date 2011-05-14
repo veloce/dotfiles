@@ -20,7 +20,7 @@ syntax on
 
 set background=dark
 set t_Co=256
-colorscheme aldmeris256
+colorscheme default
 
 set nobackup
 set nowritebackup
