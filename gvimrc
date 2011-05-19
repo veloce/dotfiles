@@ -5,6 +5,8 @@ set guioptions-=m
 " Don't show scrollbars
 set guioptions-=r
 set guioptions-=l
+" disable popup dialogs
+set guioptions+=c
 
 colorscheme aldmeris
 if &l:diff
