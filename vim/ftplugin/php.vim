@@ -2,8 +2,8 @@
 nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
 " enable syntax code completion
-setlocal omnifunc=syntaxcomplete#Complete
-let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
+"setlocal omnifunc=syntaxcomplete#Complete
+"let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
 " fast arrow
 imap <buffer> jj ->

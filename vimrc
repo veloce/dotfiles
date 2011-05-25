@@ -116,6 +116,9 @@ let g:CommandTMaxFiles = 30000
 " indents guides
 let g:indent_guides_guide_size = 1
 
+" snipMate
+let g:snips_author = "Vincent Velociter"
+
 " Processing results in quickfix http://efiquest.org/2009-02-19/32/
 com! -nargs=1 Qfdo try | sil cfirst |
 \ while 1 | exec <q-args> | sil cn | endwhile |
