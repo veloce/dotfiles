@@ -4,7 +4,7 @@ set guioptions-=T
 set guioptions-=m
 " Don't show scrollbars
 set guioptions-=r
-set guioptions-=l
+set guioptions-=L
 " disable popup dialogs
 set guioptions+=c
 
