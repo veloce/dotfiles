@@ -10,7 +10,8 @@ syntax on
 
 set background=dark
 set t_Co=256
-colorscheme desert256
+let g:aldmeris_termcolors="tango"
+colorscheme aldmeris
 
 set encoding=utf-8
 
@@ -98,9 +99,10 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" edit, read or rename files in the current directory of the buffer
+" edit, read, save as or rename files in the current directory of the buffer
 nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
+nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 
 " Lusty
