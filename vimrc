@@ -53,6 +53,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" Try an mapping to leave insert mode
+imap jk <ESC>
+
 " special indent settings
 au BufNewFile,BufRead *.class.php setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
