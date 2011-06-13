@@ -17,3 +17,4 @@ link ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 link ~/.dotfiles/tmux.conf ~/.tmux.conf
 link ~/.dotfiles/xcolors ~/.xcolors
 link ~/.dotfiles/Xmodmap ~/.Xmodmap
+link ~/.dotfiles/ctags ~/.ctags
