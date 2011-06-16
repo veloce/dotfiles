@@ -108,6 +108,10 @@ nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 
+" Fugitive
+map <leader>g :Ggrep <C-R><C-W><CR>:copen<CR>
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
 " Lusty
 let g:LustyJugglerShowKeys = 0
 
@@ -170,9 +174,6 @@ com! DiffSaved call s:DiffWithSaved()
 
 " solarized toggle background function
 call togglebg#map("<F4>")
-
-" Useful mapping for fugitive
-autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " convert char to htmlentity with php
 nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT_COMPAT, 'UTF-8');"))<CR>p
