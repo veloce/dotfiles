@@ -11,6 +11,7 @@
     untracked = red
 [core]
     editor = vim -u $HOME/.vimrc_git -X
+    autocrlf = input
 [alias]
     co = checkout
     br = branch
