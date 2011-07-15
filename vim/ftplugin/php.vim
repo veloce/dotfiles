@@ -6,7 +6,7 @@ nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 "let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
 " fast arrow
-imap <buffer> jj ->
+imap <buffer> -- ->
 
 " phpdoc
 nnoremap <C-P> :call PhpDocSingle()<CR> 
