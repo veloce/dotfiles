@@ -110,7 +110,7 @@ nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 
 " Fugitive
 command! -nargs=+ GGrep execute 'silent! Ggrep! <args>' | copen
-nmap <leader>g :silent Ggrep <C-R><C-W><CR>:copen<CR>
+nmap <leader>g GGrep <C-R><C-W><CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Lusty
