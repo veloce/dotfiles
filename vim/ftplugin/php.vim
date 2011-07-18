@@ -7,6 +7,7 @@ nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
 " fast arrow
 imap <buffer> -- ->
+imap <buffer> == =>
 
 " phpdoc
 nnoremap <C-P> :call PhpDocSingle()<CR> 
