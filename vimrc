@@ -109,8 +109,8 @@ nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 
 " Fugitive
-command! -complete=file -nargs=+ GGrep execute 'silent! Ggrep! <args>' | copen
-nmap <leader>g GGrep <C-R><C-W><CR>
+command! -complete=file -nargs=+ GGrep execute 'silent! Ggrep! <args> | copen | redraw!'
+nmap <leader>g :GGrep <C-R><C-W><CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Lusty
