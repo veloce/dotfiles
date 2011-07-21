@@ -87,7 +87,7 @@ function extract()
 # Open man pages in vim
 function vman()
 {
-    vim -XM -c "Man $1" -c "only"
+    vim -u ".vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
 
 # Ctags
