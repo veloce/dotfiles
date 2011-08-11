@@ -3,7 +3,6 @@
 set nocompatible                      " this should be the first
 
 call pathogen#infect()
-call pathogen#helptags()
 
 filetype indent plugin on
 syntax on
