@@ -53,7 +53,8 @@ set shiftwidth=4
 set softtabstop=4
 
 " Try an mapping to leave insert mode
-imap jk 
+imap fj 
+imap jf 
 
 " special indent settings
 au BufNewFile,BufRead *.class.php setlocal tabstop=2 shiftwidth=2 softtabstop=2
@@ -72,6 +73,7 @@ nmap <leader>h :botright vert help
 if &diff
     nmap <leader>do :diffget<space>
     nmap <leader>dp :diffput<space>
+    nmap <leader>du :diffupdate<CR>
     nmap <leader>gl :diffget LOCAL<CR>
     nmap <leader>gr :diffget REMOTE<CR>
 endif
