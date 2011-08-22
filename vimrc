@@ -94,7 +94,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " Go to previous buffer
-map <leader>\ <C-^>
+map <tab><tab> <C-^>
 
 " Map Y to yank until EOL, rather than act as yy,
 map Y y$
