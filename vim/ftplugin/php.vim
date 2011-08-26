@@ -5,6 +5,8 @@ nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 "setlocal omnifunc=syntaxcomplete#Complete
 "let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
+nmap <buffer><leader>ns :call PhpInsertUse()<CR>
+
 " fast arrow
 imap <buffer> -- ->
 
