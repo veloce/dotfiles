@@ -108,6 +108,7 @@ nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
+nmap <leader>mk :!mkdir <C-R>=expand("%:p:h") . "/" <CR>
 
 " Fugitive
 command! -complete=file -nargs=+ GGrep execute 'silent! Ggrep! <args> | copen | redraw!'
@@ -120,6 +121,7 @@ let g:LustyJugglerShowKeys = 0
 " Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs"
 nmap <leader>a :Ack <C-R><C-W><CR>
+vmap <leader>a y:Ack <C-R>"<CR>
 
 " CommandT
 let g:CommandTMaxFiles = 30000
