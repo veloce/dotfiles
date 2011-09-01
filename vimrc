@@ -118,6 +118,9 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " Lusty
 let g:LustyJugglerShowKeys = 0
 
+" Autoclose
+nmap <Leader>x <Plug>ToggleAutoCloseMappings
+
 " Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
 nmap <leader>a :Ack <C-R><C-W><CR>

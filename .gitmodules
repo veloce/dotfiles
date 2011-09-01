@@ -64,3 +64,6 @@
 [submodule "vim/bundle/php-namespace"]
 	path = vim/bundle/php-namespace
 	url = git://github.com/arnaud-lb/vim-php-namespace.git
+[submodule "vim/bundle/autoclose"]
+	path = vim/bundle/autoclose
+	url = https://github.com/vim-scripts/AutoClose.git
