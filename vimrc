@@ -18,7 +18,7 @@ set history=100                       " nb of cmd history lines
 set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
 set wildmode=list:longest             
-set wildignore+=*/cache/**,*/logs/**,*.pyc
+set wildignore+=*/cache/**,*/logs/**,*/build/**,*.pyc
 
 set ignorecase                        " Case-insensitive searching.
 set smartcase                         " But case-sensitive if expression contains a capital letter.
@@ -119,7 +119,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 let g:LustyJugglerShowKeys = 0
 
 " Ack
-let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs"
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
 nmap <leader>a :Ack <C-R><C-W><CR>
 vmap <leader>a y:Ack <C-R>"<CR>
 
