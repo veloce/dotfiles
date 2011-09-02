@@ -11,6 +11,7 @@
 --exclude='*/swiftmailer/*' 
 --exclude='*/zend/*' 
 --exclude='*/bootstrap.*'
+--exclude='*/build/*'
 
 --langdef=js
 --langmap=js:.js
