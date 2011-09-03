@@ -103,12 +103,13 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" edit, read, save as or rename files in the current directory of the buffer
+" in current directory operations
 nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>mk :!mkdir <C-R>=expand("%:p:h") . "/" <CR>
+cnoremap %% <C-R>=expand("%:p:h")."/"<CR>
 
 " Fugitive
 command! -complete=file -nargs=+ GGrep execute 'silent! Ggrep! <args> | copen | redraw!'
