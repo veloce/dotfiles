@@ -112,7 +112,7 @@ nmap <leader>mk :!mkdir <C-R>=expand("%:p:h") . "/" <CR>
 cnoremap %% <C-R>=expand("%:p:h")."/"<CR>
 
 " Fugitive
-command! -complete=file -nargs=+ GGrep execute "silent! Ggrep <args> | copen | redraw!"
+command! -complete=file -nargs=+ GGrep execute "silent! Ggrep" . <q-args> . " | copen | redraw!"
 nmap <leader>g :GGrep <C-R><C-W><CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
