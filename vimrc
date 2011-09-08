@@ -113,7 +113,7 @@ cnoremap %% <C-R>=expand("%:p:h")."/"<CR>
 
 " Fugitive
 command! -complete=file -nargs=+ GGrep execute "silent! Ggrep" . <q-args> . " | copen | redraw!"
-nmap <leader>g :GGrep <C-R><C-W><CR>
+nmap <leader>g :GGrep '<C-R><C-W>'<CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Lusty
@@ -124,8 +124,8 @@ nmap <Leader>x <Plug>ToggleAutoCloseMappings
 
 " Ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
-nmap <leader>a :Ack <C-R><C-W><CR>
-vmap <leader>a y:Ack <C-R>"<CR>
+nmap <leader>a :Ack '<C-R><C-W>'<CR>
+vmap <leader>a y:Ack '<C-R>"'<CR>
 
 " CommandT
 let g:CommandTMaxFiles = 30000
