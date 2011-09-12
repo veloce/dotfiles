@@ -7,6 +7,9 @@ nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
 nmap <buffer><leader>ns :call PhpInsertUse()<CR>
 
+" Replace namespace and class name based on filename
+nmap <buffer> <unique> <leader>pn gg/namespace <CR>D"%PdF/r;:s#/#\\#<CR>Inamespace  <ESC>d/[A-Z]<CR>/class <CR>wcw<C-R>=expand("%:t:r")<CR><ESC>
+
 " fast arrow
 imap <buffer> -- ->
 
