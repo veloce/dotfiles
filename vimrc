@@ -193,7 +193,7 @@ function <SID>MkdirIfNotExist(directory)
         call system('mkdir -p '.shellescape(a:directory))
     endif
 endfunction
-au BufCreate,BufFilePost * :call <SID>MkdirIfNotExist(expand('<afile>:h'))
+au BufNewFile,BufFilePost * :call <SID>MkdirIfNotExist(expand('<afile>:h'))
 
 " a simple macro to re-generate id entries in messages.xml files
 let @r='f=ll"tyi"%jf=lvi""tp^'
