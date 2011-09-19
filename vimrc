@@ -44,6 +44,7 @@ set nostartofline                     " Stop certain movements from always going
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
 
 " indent settings
+set listchars=tab:▸\ ,eol:$
 set autoindent
 set expandtab
 set smartindent
