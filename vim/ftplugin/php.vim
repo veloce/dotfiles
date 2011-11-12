@@ -5,6 +5,24 @@ nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 "setlocal omnifunc=syntaxcomplete#Complete
 "let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
+" jump to a twig view in symfony
+function! s:JumpToView()
+    setlocal path+=**
+    mark C
+    normal! ]M
+    let end = line(".")
+    normal! [m
+    try
+        call search('\v[^.:]+\.html\.twig', '', end)
+        normal! gf
+    catch
+        normal! g`C
+        echohl WarningMsg | echomsg "Template file not found" | echohl None
+    endtry
+endfunction
+com! JumpToView call s:JumpToView()
+autocmd BufEnter *Controller.php map <buffer><leader>v :JpToView<CR>
+
 nmap <buffer><leader>ns :call PhpInsertUse()<CR>
 
 " Replace namespace and class name based on filename
