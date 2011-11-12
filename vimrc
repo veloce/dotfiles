@@ -13,6 +13,7 @@ let g:aldmeris_termcolors="tango"
 colorscheme aldmeris
 
 set encoding=utf-8
+set path+=**
 
 set history=100                       " nb of cmd history lines
 set hidden                            " Change buffer without saving

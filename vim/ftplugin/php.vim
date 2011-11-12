@@ -7,7 +7,6 @@ nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
 " jump to a twig view in symfony
 function! s:JumpToView()
-    setlocal path+=**
     mark C
     normal! ]M
     let end = line(".")
