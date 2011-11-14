@@ -6,7 +6,7 @@ nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 "let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
 " jump to a twig view in symfony
-function! s:JumpToView()
+function! s:SfJumpToView()
     mark C
     normal! ]M
     let end = line(".")
@@ -19,8 +19,8 @@ function! s:JumpToView()
         echohl WarningMsg | echomsg "Template file not found" | echohl None
     endtry
 endfunction
-com! JumpToView call s:JumpToView()
-autocmd BufEnter *Controller.php map <buffer><leader>v :JpToView<CR>
+com! SfJumpToView call s:SfJumpToView()
+autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
 
 nmap <buffer><leader>ns :call PhpInsertUse()<CR>
 
