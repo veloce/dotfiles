@@ -86,6 +86,7 @@ let g:SuperTabLeadingSpaceCompletion = 0
 
 " syntastic options
 let g:syntastic_enable_signs=1
+let g:syntastic_enable_balloons=1
 " let g:syntastic_auto_loc_list = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
