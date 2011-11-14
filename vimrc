@@ -106,6 +106,9 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" JSON indent mapping
+vmap <leader>ij :!python -mjson.tool<CR>
+
 " in current directory operations
 nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
