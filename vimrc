@@ -129,7 +129,7 @@ let g:LustyJugglerShowKeys = 0
 nmap <Leader>x <Plug>ToggleAutoCloseMappings
 
 " Ack
-let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
+let g:ackprg="ack-grep -a -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
 nmap <leader>a :Ack '<C-R><C-W>'<CR>
 vmap <leader>a y:Ack '<C-R>"'<CR>
 
