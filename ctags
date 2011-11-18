@@ -24,3 +24,7 @@
 
 --PHP-kinds=cidf 
 --fields=+ain 
+
+--extra=+f
+--langdef=file
+--langmap=file:.html.twig.xml.yml
