@@ -49,6 +49,8 @@ alias sf='php symfony'
 alias p='python'
 alias c='./app/console'
 
+alias sqltags='ctags --languages=+SQL'
+
 # Git completion
 source ~/.git-completion.bash
 
@@ -90,10 +92,3 @@ function vman()
 {
     vim -u ".vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
-
-# Ctags
-function phptags()
-{ 
-    ctags -h '.php' --totals=yes --tag-relative=yes --PHP-kinds=cidf --fields=+ain --recurse --exclude='*/cache/*' --exclude='*/logs/*' --exclude='*/data/*' --exclude='\.git' --exclude='\.svn' --exclude='*/swiftmailer/*' --exclude='*/zend/*' --exclude='*/bootstrap.*' --languages=PHP
-}
-
