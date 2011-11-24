@@ -188,6 +188,3 @@ call togglebg#map("<F4>")
 
 " convert char to htmlentity with php
 nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT_COMPAT, 'UTF-8');"))<CR>p
-
-" a simple macro to re-generate id entries in messages.xml files
-let @r='f=ll"tyi"%jf=lvi""tp^'

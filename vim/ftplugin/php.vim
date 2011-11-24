@@ -1,9 +1,29 @@
-" Indent PHP templates as HTML files
-nmap <leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
+if exists("b:did_ftplugin") | finish | endif
 
-" enable syntax code completion
 "setlocal omnifunc=syntaxcomplete#Complete
 "let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
+
+" Indent PHP templates as HTML files
+nmap <buffer><leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
+
+" Insert use statement based on ctags
+nmap <buffer><leader>ns :call PhpInsertUse()<CR>
+
+" Replace namespace and class name based on filename
+nmap <buffer><leader>pn gg/namespace <CR>D"%PdF/r;:s#/#\\#<CR>Inamespace  <ESC>d/[A-Z]<CR>/class <CR>wcw<C-R>=expand("%:t:r")<CR><ESC>
+
+" fast arrow
+imap <buffer> -- ->
+
+" phpdoc
+nnoremap <buffer><C-P> :call PhpDocSingle()<CR>
+let g:pdv_cfg_Author = "Vincent Velociter"
+
+"Folding
+nmap <buffer> <F5> <Esc>:EnableFastPHPFolds<Cr>
+nmap <buffer> <C-F5> <Esc>:EnablePHPFolds<Cr>
+nmap <buffer> <F6> <Esc>:DisablePHPFolds<Cr>
+let g:DisableAutoPHPFolding = 1
 
 " jump to a twig view in symfony
 function! s:SfJumpToView()
@@ -21,24 +41,6 @@ function! s:SfJumpToView()
 endfunction
 com! SfJumpToView call s:SfJumpToView()
 autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
-
-nmap <buffer><leader>ns :call PhpInsertUse()<CR>
-
-" Replace namespace and class name based on filename
-nmap <buffer> <unique> <leader>pn gg/namespace <CR>D"%PdF/r;:s#/#\\#<CR>Inamespace  <ESC>d/[A-Z]<CR>/class <CR>wcw<C-R>=expand("%:t:r")<CR><ESC>
-
-" fast arrow
-imap <buffer> -- ->
-
-" phpdoc
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-let g:pdv_cfg_Author = "Vincent Velociter"
-
-"Folding
-nmap <buffer> <F5> <Esc>:EnableFastPHPFolds<Cr>
-nmap <buffer> <C-F5> <Esc>:EnablePHPFolds<Cr>
-nmap <buffer> <F6> <Esc>:DisablePHPFolds<Cr>
-let g:DisableAutoPHPFolding = 1
 
 "PHP Colors
 hi link phpVarSelector Identifier
