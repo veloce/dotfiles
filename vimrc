@@ -117,6 +117,9 @@ nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>mk :!mkdir <C-R>=expand("%:p:h") . "/" <CR>
 cnoremap %% <C-R>=expand("%:p:h")."/"<CR>
 
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
 " Fugitive
 command! -complete=file -nargs=+ GGrep execute "silent! Ggrep" . <q-args> . " | copen | redraw!"
 nmap <leader>g :GGrep '<C-R><C-W>'<CR>
@@ -182,9 +185,6 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
-
-" solarized toggle background function
-call togglebg#map("<F4>")
 
 " convert char to htmlentity with php
 nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT_COMPAT, 'UTF-8');"))<CR>p
