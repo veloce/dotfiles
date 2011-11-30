@@ -3,6 +3,9 @@ if exists("b:did_ftplugin") | finish | endif
 "setlocal omnifunc=syntaxcomplete#Complete
 "let g:omni_syntax_group_exclude_php = 'phpCoreConstant,phpConstant'
 
+" special indent settings
+au BufNewFile,BufRead *.class.php setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 " Indent PHP templates as HTML files
 nmap <buffer><leader>it :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
