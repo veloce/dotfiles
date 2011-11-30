@@ -90,7 +90,7 @@ nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>mk :!mkdir <C-R>=expand("%:p:h") . "/" <CR>
-cnoremap %% <C-R>=expand("%:p:h")."/"<CR>
+cnoremap %% <C-R>=expand("%:h")."/"<CR>
 
 " Diff config
 if &diff
