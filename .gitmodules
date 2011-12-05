@@ -76,3 +76,6 @@
 [submodule "vim/bundle/scala"]
 	path = vim/bundle/scala
 	url = git@github.com:veloce/vim-scala.git
+[submodule "vim/bundle/behat"]
+	path = vim/bundle/behat
+	url = git@github.com:veloce/vim-behat.git
