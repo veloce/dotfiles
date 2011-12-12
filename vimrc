@@ -39,7 +39,8 @@ set scrolloff=5                       " context around cursor
 set showcmd                           " Show partial commands in the last line of the screen
 set showmode
 set smartcase                         " case-sensitive search if expression contains a capital letter.
-set statusline=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
+set statusline=%{fugitive#statusline()}
+set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
 set wildignore+=*/cache/**,*/logs/**,*/build/**,*.pyc
 set wildmenu                          " Better command-line completion
 set wildmode=list:longest
@@ -69,11 +70,7 @@ nmap <leader>4 :setlocal tabstop=4<cr>:setlocal shiftwidth=4<cr>:setlocal softta
 nmap <leader>= <Esc>mygg=G`y
 
 " launch help in vert mode split to the right window
-nmap <leader>h :botright vert help 
-
-" Faster viewport scrolling
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nmap <Leader>h <Esc>:botright vert help<cr>:vert resize 80<cr>:help<space>
 
 " Go to previous buffer
 map <tab><tab> <C-^>
@@ -81,8 +78,7 @@ map <tab><tab> <C-^>
 " Map Y to yank until EOL, rather than act as yy,
 map Y y$
 
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" next search
+" clear search highlight
 nnoremap <C-L> :nohl<CR><C-L>
 
 " JSON indent mapping
@@ -142,6 +138,7 @@ vmap <leader>a y:Ack '<C-R>"'<CR>
 
 " CommandT
 let g:CommandTMaxFiles = 30000
+let g:CommandTMaxHeight = 20
 
 " indents guides
 let g:indent_guides_guide_size = 1
