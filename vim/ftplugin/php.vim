@@ -18,10 +18,6 @@ nmap <buffer><leader>pn gg/namespace <CR>D"%PdF/r;:s#/#\\#<CR>Inamespace  <ESC>d
 " fast arrow
 imap <buffer> -- ->
 
-" phpdoc
-nnoremap <buffer><C-P> :call PhpDocSingle()<CR>
-let g:pdv_cfg_Author = "Vincent Velociter"
-
 "Folding
 nmap <buffer> <F5> <Esc>:EnableFastPHPFolds<Cr>
 nmap <buffer> <C-F5> <Esc>:EnablePHPFolds<Cr>
