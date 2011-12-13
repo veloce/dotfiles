@@ -41,7 +41,7 @@ set showmode
 set smartcase                         " case-sensitive search if expression contains a capital letter.
 set statusline=%{fugitive#statusline()}
 set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
-set wildignore+=*/cache/**,*/logs/**,*/build/**,*.pyc
+set wildignore+=*/cache/*,*/logs/*,*/build/*,*.pyc,*/web/*
 set wildmenu                          " Better command-line completion
 set wildmode=list:longest
 
@@ -55,7 +55,6 @@ set shiftwidth=4
 set softtabstop=4
 
 " }}}
-
 " MAPPINGS {{{
 " ------------
 " Try an mapping to leave insert mode
@@ -105,7 +104,6 @@ endif
 nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT_COMPAT, 'UTF-8');"))<CR>p
 
 " }}}
-
 " PLUGINS SETTINGS {{{
 " -------------------
 " supertab
@@ -147,7 +145,6 @@ let g:indent_guides_guide_size = 1
 let g:snips_author = "Vincent Velociter"
 
 "}}}
-
 " CUSTOM COMMANDS {{{
 " -------------------
 
