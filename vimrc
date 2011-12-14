@@ -41,7 +41,7 @@ set showmode
 set smartcase                         " case-sensitive search if expression contains a capital letter.
 set statusline=%{fugitive#statusline()}
 set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
-set wildignore+=*/cache/*,*/logs/*,*/build/*,*.pyc,*/web/*
+set wildignore=*/cache/*,*/logs/*,*/build/*,*.pyc,tags
 set wildmenu                          " Better command-line completion
 set wildmode=list:longest
 
@@ -191,6 +191,24 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+" set wildignore from .gitignore
+let filename = '.gitignore'
+if filereadable(filename)
+    let igstring = ''
+    for oline in readfile(filename)
+        let line = substitute(oline, '\s|\n|\r', '', "g")
+        if line =~ '^#' | con | endif
+        if line == '' | con  | endif
+        if line =~ '^!' | con  | endif
+        if line =~ '/$' | let igstring .= "," . line . "*" | con | endif
+        let igstring .= "," . line
+    endfor
+    let execstring = "set wildignore=".substitute(igstring, '^,', '', "g")
+    execute execstring
+endif
+" and create a command to restore default wildignore
+com! Setwid set wildignore=*/cache/*,*/logs/*,*/build/*,*.pyc,tags
 
 " }}}
 
