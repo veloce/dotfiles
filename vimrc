@@ -41,7 +41,7 @@ set showmode
 set smartcase                         " case-sensitive search if expression contains a capital letter.
 set statusline=%{fugitive#statusline()}
 set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
-set wildignore=*/cache/*,*/logs/*,*/build/*,*.pyc,tags
+set wildignore=*/cache/*,*/logs/*,*/build/*,*.py[co],tags
 set wildmenu                          " Better command-line completion
 set wildmode=list:longest
 
@@ -207,9 +207,9 @@ if filereadable(filename)
     endfor
     let execstring = "set wildignore=".substitute(igstring, '^,', '', "g")
     execute execstring
+    " and create a command to restore default wildignore
+    com! Setwid set wildignore=*/cache/*,*/logs/*,*/build/*,*.py[co],tags
 endif
-" and create a command to restore default wildignore
-com! Setwid set wildignore=*/cache/*,*/logs/*,*/build/*,*.pyc,tags
 
 " }}}
 
