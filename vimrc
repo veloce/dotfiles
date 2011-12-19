@@ -6,7 +6,7 @@ let g:ft_feature='behat'
 
 call pathogen#infect()
 
-let g:ft_feature='behat'
+let g:feature_filetype='behat'
 
 filetype indent plugin on
 syntax on
