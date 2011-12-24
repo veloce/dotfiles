@@ -1,6 +1,8 @@
 # enable vi mode
 set -o vi
 
+export EDITOR=vim
+
 # history
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
