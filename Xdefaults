@@ -27,7 +27,7 @@ URxvt.depth:       24
 URxvt.buffered:    true
 
 URxvt.background:  #272727
-URxvt.foreground:  gray90
+URxvt.foreground:  #fbfbfb
 URxvt.transparent: false
 URxvt.shading:     100
 URxvt.color7:      gray90
