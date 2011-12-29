@@ -1,0 +1,4 @@
+set gui=none
+set defsearch=duckduckgo
+
+" vim: set ft=vimperator:

@@ -18,3 +18,4 @@ link ~/.dotfiles/tmux.conf ~/.tmux.conf
 link ~/.dotfiles/xcolors ~/.xcolors
 link ~/.dotfiles/Xmodmap ~/.Xmodmap
 link ~/.dotfiles/ctags ~/.ctags
+link ~/.dotfiles/vimperatorrc ~/.vimperatorrc
