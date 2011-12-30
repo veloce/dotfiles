@@ -2,8 +2,6 @@
 
 set nocompatible                      " this should be the first
 
-let g:ft_feature='behat'
-
 call pathogen#infect()
 
 let g:feature_filetype='behat'
