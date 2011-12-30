@@ -1,12 +1,12 @@
 !---------------------------------------
-! file: ~/.Xdefaults
+! file: ~/.Xresources
 ! author: Vincent Velociter
 ! vim:ft=xdefaults:fdm=marker
 ! --------------------------------------
 
 
 ! -- Colorscheme -- !
-#include ".xcolors/tango"
+#include "xcolors/tango"
 
 ! -- Fonts {{{
 Xft.antialias:     true

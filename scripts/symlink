@@ -11,11 +11,10 @@ link ~/.dotfiles/vim ~/.vim
 link ~/.dotfiles/vimrc ~/.vimrc
 link ~/.dotfiles/vimrc_git ~/.vimrc_git
 link ~/.dotfiles/gvimrc ~/.gvimrc
-link ~/.dotfiles/Xdefaults ~/.Xdefaults
+link ~/.dotfiles/Xresources ~/.Xresources
 link ~/.dotfiles/ackrc ~/.ackrc
 link ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 link ~/.dotfiles/tmux.conf ~/.tmux.conf
-link ~/.dotfiles/xcolors ~/.xcolors
 link ~/.dotfiles/Xmodmap ~/.Xmodmap
 link ~/.dotfiles/ctags ~/.ctags
 link ~/.dotfiles/vimperatorrc ~/.vimperatorrc
