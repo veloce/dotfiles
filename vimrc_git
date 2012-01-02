@@ -1,18 +1,5 @@
 " Vincent Velociter 
 " Special vimrc to launch vim for git commit as I don't like to wait ;)
-" To be sure:
-"
-" time vim -c q
-" real	0m0.407s
-" user	0m0.343s
-" sys	0m0.063s
-"
-" time vim -u vimrc_git -c q
-" real	0m0.073s
-" user	0m0.057s
-" sys	0m0.017s
-" This is much better !
-
 
 set nocompatible
 filetype plugin on
@@ -29,3 +16,6 @@ set noswapfile
 set number
 set laststatus=2
 set statusline=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
+
+map! jk 
+map! kj 
