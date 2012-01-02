@@ -56,8 +56,8 @@ set softtabstop=4
 " MAPPINGS {{{
 " ------------
 " Try an mapping to leave insert mode
-imap jk 
-imap kj 
+map! jk 
+map! kj 
 
 " easy switch for indent spaces
 nmap <leader>2 :setlocal tabstop=2<cr>:setlocal shiftwidth=2<cr>:setlocal softtabstop=2<cr>
