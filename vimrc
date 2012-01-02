@@ -39,7 +39,7 @@ set showmode
 set smartcase                         " case-sensitive search if expression contains a capital letter.
 set statusline=%{fugitive#statusline()}
 set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
-set wildignore=*/cache/*,*/logs/*,*/build/*,*.py[co],*.class,*.o,*.so,tags,web/bundles,web/css,web/js
+set wildignore=*/cache/*,*/logs/*,*/build/*,*.py[co],*.class,*.o,*.so,tags,*/web/bundles,*/web/css,*/web/js,*/web/dashboard
 set wildmenu                          " Better command-line completion
 set wildmode=list:longest
 
