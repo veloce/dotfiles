@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo cp -R ~/.dotfiles/vim/colors /root/.vim
+sudo cp ~/.dotfiles/vimrc_root /root/.vimrc
