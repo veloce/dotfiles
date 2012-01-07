@@ -1,9 +1,4 @@
 set gui=navigation,tabs
 set defsearch=duckduckgo
 
-imap jk <Esc>
-imap kj <Esc>
-cmap jk <Esc>
-cmap kj <Esc>
-
 " vim: set ft=vimperator:
