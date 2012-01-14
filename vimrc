@@ -134,6 +134,8 @@ vmap <leader>a y:Ack '<C-R>"'<CR>
 
 " ctrlp
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_extensions = ['tag']
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>u :CtrlPMRU<CR>
 
