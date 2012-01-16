@@ -68,5 +68,3 @@ cnoremap %% <C-R>=expand("%:h")."/"<CR>
 
 map! jk 
 map! kj 
-vmap jk 
-vmap kj 

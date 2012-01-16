@@ -58,8 +58,6 @@ set softtabstop=4
 " Try an mapping to leave insert, command and visual mode
 map! jk 
 map! kj 
-vmap jk 
-vmap kj 
 
 " easy switch for indent spaces
 nmap <leader>2 :setlocal tabstop=2<cr>:setlocal shiftwidth=2<cr>:setlocal softtabstop=2<cr>
