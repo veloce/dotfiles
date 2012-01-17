@@ -17,6 +17,7 @@ colorscheme aldmeris
 " OPTIONS {{{
 " -----------
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
+set completeopt=menuone,preview
 set cmdheight=2                       " command bar height
 set cursorline
 set directory=~/.vim/tmp              " directory to put swap files
