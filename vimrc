@@ -105,6 +105,10 @@ nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT
 " }}}
 " PLUGINS SETTINGS {{{
 " -------------------
+
+" pasta
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell']
+
 " supertab
 "let g:SuperTabDefaultCompletionType = context
 let g:SuperTabLeadingSpaceCompletion = 0
