@@ -103,7 +103,7 @@ nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT
 " -------------------
 
 " pasta
-let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell']
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'feature']
 
 " supertab
 "let g:SuperTabDefaultCompletionType = context
