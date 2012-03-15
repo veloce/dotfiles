@@ -119,6 +119,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" command-t
+let g:CommandTMaxHeight=20
+
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
