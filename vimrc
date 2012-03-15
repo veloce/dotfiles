@@ -135,12 +135,6 @@ let g:ackprg="ack -a -H --nocolor --nogroup --column --ignore-dir=cache --ignore
 nmap <leader>a :Ack '<C-R><C-W>'<CR>
 vmap <leader>a y:Ack '<C-R>"'<CR>
 
-" ctrlp
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>u :CtrlPMRU<CR>
-
 " indents guides
 let g:indent_guides_guide_size = 1
 
