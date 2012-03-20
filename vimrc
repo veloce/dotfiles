@@ -121,6 +121,7 @@ set statusline+=%*
 
 " command-t
 let g:CommandTMaxHeight=20
+let g:CommandTMaxFiles=30000
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
