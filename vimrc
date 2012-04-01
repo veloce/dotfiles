@@ -160,7 +160,7 @@ com! -nargs=1 Qfdofile try | sil cfirst |
 \ endtry
 
 " Strip trailing whitespaces
-function! <SID>StripTrailingWhitespaces()
+function! <SID>StripTWS()
     " Preparation: save last search, and cursor position.
     let _s=@/
     let l = line(".")
@@ -171,8 +171,8 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
-command! StripTWS call <SID>StripTrailingWhitespaces()
-autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.twig,*.html,*.xml,*.css :call <SID>StripTrailingWhitespaces()
+command! StripTWS call <SID>StripTWS()
+autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.hs,*.scala,*.rb,*.twig,*.html,*.xml,*.css,*.vim :call <SID>StripTWS()
 
 " Show syntax highlighting groups for word under cursor
 nnoremap <F8> :call <SID>SynStack()<CR>
