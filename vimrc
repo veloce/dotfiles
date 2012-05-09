@@ -102,6 +102,9 @@ nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT
 " PLUGINS SETTINGS {{{
 " -------------------
 
+" I have to set this here because of javascript bundle
+autocmd FileType php setlocal iskeyword-=$
+
 " pasta
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat']
 
