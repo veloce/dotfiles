@@ -95,6 +95,9 @@ if &diff
     nmap <leader>gr :diffget REMOTE<CR>
 endif
 
+" replace several times made easy
+vmap <leader>p "0p
+
 " convert char to htmlentity with php
 nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT_COMPAT, 'UTF-8');"))<CR>p
 
