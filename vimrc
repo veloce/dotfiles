@@ -53,6 +53,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" I have to set this here because of javascript bundle
+autocmd FileType php setlocal iskeyword-=$
+
 " }}}
 " MAPPINGS {{{
 " ------------
@@ -105,8 +108,9 @@ nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT
 " PLUGINS SETTINGS {{{
 " -------------------
 
-" I have to set this here because of javascript bundle
-autocmd FileType php setlocal iskeyword-=$
+" pydoc
+let g:pydoc_open_cmd = 'vsplit'
+let g:pydoc_highlight = 0
 
 " pasta
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat']
