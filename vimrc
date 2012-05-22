@@ -159,6 +159,8 @@ let g:snips_author = "Vincent Velociter"
 " CUSTOM COMMANDS {{{
 " -------------------
 
+com! ReloadPyTags execute '!ctags ' . system('python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"')
+
 " Processing results in quickfix http://efiquest.org/2009-02-19/32/
 com! -nargs=1 Qfdo try | sil cfirst |
 \ while 1 | exec <q-args> | sil cn | endwhile |
