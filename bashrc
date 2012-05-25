@@ -44,9 +44,9 @@ alias mkdir='mkdir -p'
 alias h='history'
 
 alias clisp='clisp -q -modern'
-alias sf='php symfony'
 alias p='python'
 alias c='./app/console'
+alias ccc='./app/console ca:c --no-warmup && ./app/console ca:wa'
 
 alias sqltags='ctags --languages=+SQL'
 
