@@ -47,7 +47,7 @@ alias clisp='clisp -q -modern'
 alias p='python'
 alias c='./app/console'
 alias ccc='./app/console ca:c --no-warmup && ./app/console ca:wa'
-alias cass = './app/console assetic:dump --watch'
+alias cass='./app/console assetic:dump --watch'
 
 alias sqltags='ctags --languages=+SQL'
 
