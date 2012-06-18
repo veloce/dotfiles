@@ -12,5 +12,5 @@ colorscheme aldmeris
 if &l:diff
   set guifont=Inconsolata\ 10
 else
-  set guifont=Inconsolata\ 12
+  set guifont=Inconsolata\ 14
 endif
