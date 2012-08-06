@@ -11,3 +11,5 @@ for p in sys.path:
 EOF
 
 setlocal tags+=$HOME/.vim/ctags/python.ctags
+
+com! RpyTags execute '!ctags ' . system('python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"')

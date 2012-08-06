@@ -41,6 +41,10 @@ endfunction
 com! SfJumpToView call s:SfJumpToView()
 autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
 
+" tags related commands
+com! Rtags !ctags src/
+com! Rvtags !ctags -f vendor.tags vendor/
+
 "PHP Colors
 hi link phpVarSelector Identifier
 hi link phpIdentifier Identifier

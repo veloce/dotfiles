@@ -50,7 +50,7 @@ alias h='history'
 alias clisp='clisp -q -modern'
 alias p='python'
 alias c='./app/console'
-alias ccc='./app/console ca:c --no-warmup && ./app/console ca:wa'
+alias ccc='./app/console ca:c'
 alias cass='./app/console assetic:dump --watch'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
