@@ -19,3 +19,4 @@ link ~/.dotfiles/Xmodmap ~/.Xmodmap
 link ~/.dotfiles/ctags ~/.ctags
 link ~/.dotfiles/vimperatorrc ~/.vimperatorrc
 link ~/.dotfiles/redshift.conf ~/.config/redshift.conf
+link ~/.dotfiles/mplayer.conf ~/.mplayer/config
