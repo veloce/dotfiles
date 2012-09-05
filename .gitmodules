@@ -82,9 +82,6 @@
 [submodule "vim/bundle/pasta"]
 	path = vim/bundle/pasta
 	url = https://github.com/sickill/vim-pasta.git
-[submodule "vim/bundle/easymotion"]
-	path = vim/bundle/easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
