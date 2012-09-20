@@ -1,5 +1,8 @@
 #!/bin/sh
 
-sudo cp -R ~/.dotfiles/vim/colors /root/.vim/colors
-sudo mkdir /root/.vim/tmp
-sudo cp ~/.dotfiles/vimrc_root /root/.vimrc
+DIR=$(cd `dirname $0` && pwd)
+
+sudo mkdir -p /root/.vim/tmp
+sudo mkdir /root/.vim/colors
+sudo cp -R $DIR/../vim/colors/* /root/.vim/colors
+sudo cp $DIR/../vimrc_root /root/.vimrc
