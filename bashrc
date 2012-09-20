@@ -7,9 +7,10 @@ shopt -s histappend
 
 shopt -s checkwinsize
 
-[ -d $HOME/bin/ ] && export PATH=$HOME/bin:$PATH
-
 [ -d $HOME/src/play ] && export PATH=$PATH:$HOME/src/play
+
+# disable xrvt freeze with ctrl-s and ctrl-q
+stty -ixon -xioff
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
