@@ -20,3 +20,4 @@ link ~/.dotfiles/ctags ~/.ctags
 link ~/.dotfiles/vimperatorrc ~/.vimperatorrc
 link ~/.dotfiles/redshift.conf ~/.config/redshift.conf
 link ~/.dotfiles/mplayer.conf ~/.mplayer/config
+link ~/.dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
