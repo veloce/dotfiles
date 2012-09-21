@@ -1,6 +1,9 @@
 #!/bin/sh
 
 xrdb -merge $HOME/.Xresources
-xmodmap $HOME/.Xmodmap
+#xmodmap $HOME/.Xmodmap
 
-exec ck-launch-session startxfce4
+# redshift
+redshift &
+
+exec ck-launch-session xmonad
