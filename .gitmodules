@@ -97,3 +97,6 @@
 [submodule "vim/bundle/tagbar-phpctags"]
 	path = vim/bundle/tagbar-phpctags
 	url = https://github.com/techlivezheng/tagbar-phpctags.git
+[submodule "vim/bundle/commaobject"]
+	path = vim/bundle/commaobject
+	url = https://github.com/austintaylor/vim-commaobject.git
