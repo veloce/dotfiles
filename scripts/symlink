@@ -1,23 +1,31 @@
 #!/bin/sh
 
+DIR=$(cd `dirname $0` && pwd)
+
 link (){
-    rm -f $2
-    ln -s $1 $2
+    target="$DIR/../$1"
+    link=$2
+
+    echo "ln -s $target $link"
+
+    rm -f $link
+    ln -s $target $link
 }
 
-link ~/.dotfiles/bashrc ~/.bashrc
-link ~/.dotfiles/gitconfig ~/.gitconfig
-link ~/.dotfiles/vim ~/.vim
-link ~/.dotfiles/vimrc ~/.vimrc
-link ~/.dotfiles/vimrc_git ~/.vimrc_git
-link ~/.dotfiles/gvimrc ~/.gvimrc
-link ~/.dotfiles/Xresources ~/.Xresources
-link ~/.dotfiles/ackrc ~/.ackrc
-link ~/.dotfiles/git-completion.bash ~/.git-completion.bash
-link ~/.dotfiles/tmux.conf ~/.tmux.conf
-link ~/.dotfiles/Xmodmap ~/.Xmodmap
-link ~/.dotfiles/ctags ~/.ctags
-link ~/.dotfiles/vimperatorrc ~/.vimperatorrc
-link ~/.dotfiles/redshift.conf ~/.config/redshift.conf
-link ~/.dotfiles/mplayer.conf ~/.mplayer/config
-link ~/.dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
+link bashrc ~/.bashrc
+link gitconfig ~/.gitconfig
+link vim ~/.vim
+link vimrc ~/.vimrc
+link vimrc_git ~/.vimrc_git
+link gvimrc ~/.gvimrc
+link Xresources ~/.Xresources
+link ackrc ~/.ackrc
+link git-completion.bash ~/.git-completion.bash
+link tmux.conf ~/.tmux.conf
+link Xmodmap ~/.Xmodmap
+link ctags ~/.ctags
+link vimperatorrc ~/.vimperatorrc
+link redshift.conf ~/.config/redshift.conf
+link mplayer.conf ~/.mplayer/config
+link xmonad.hs ~/.xmonad/xmonad.hs
+link xinitrc ~/.xinitrc

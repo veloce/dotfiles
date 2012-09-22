@@ -1,2 +1,3 @@
+! Map caps lock to escape
 clear lock
 keycode 66 = Escape
