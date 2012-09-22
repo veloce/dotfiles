@@ -18,7 +18,7 @@ Xft.rgba:          rgb
 ! }}}
 
 ! Urxvt {{{
-URxvt.font:        xft:Inconsolata:size=13
+URxvt.font:        xft:Inconsolata:size=14
 
 URxvt.scrollBar:   false
 URxvt.jumpScroll:  true
