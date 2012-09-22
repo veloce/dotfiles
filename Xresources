@@ -41,6 +41,6 @@ URxvt.cursorBlink:     true
 ! Clickable urls
 URxvt.perl-ext:      default,selection,url-select
 URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.urlLauncher:   chromium
+URxvt.urlLauncher:   firefox
 URxvt.underlineURLs: true
 ! }}}
