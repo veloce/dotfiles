@@ -38,9 +38,9 @@ URxvt.intensityStyles: true
 URxvt.urgentOnBell:    true
 URxvt.cursorBlink:     true
 
-! Clickable urls
-URxvt.perl-ext:      default,selection,url-select
+! Yankable urls
+URxvt.perl-ext:      default,url-select
 URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.urlLauncher:   firefox
-URxvt.underlineURLs: true
+URxvt.url-select.launcher:   firefox
+URxvt.url-select.underline: true
 ! }}}
