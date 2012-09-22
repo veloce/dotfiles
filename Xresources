@@ -9,10 +9,12 @@
 #include "xcolors/tango"
 
 ! -- Fonts {{{
+Xft.autohint:      false
+Xft.lcdfilter:     lcddefault
+Xft.hintstyle:     hintfull
 Xft.antialias:     true
 Xft.hinting:       true
 Xft.rgba:          rgb
-Xft.hintstyle:     hintfull
 ! }}}
 
 ! Urxvt {{{
