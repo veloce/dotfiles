@@ -30,12 +30,25 @@ if [ -x /usr/bin/dircolors ] || [ -x /bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
+# aliases
 alias l='ls -Al'
 alias ll='ls -l'
 alias la='ls -a'   # show hidden files
 alias lx='ls -lXB'  # sort by extension
 alias lk='ls -lSr'  # sort by size, biggest last
+alias mkdir='mkdir -p'
+alias h='history'
+alias grep='grep --color=auto'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias clisp='clisp -q -modern'
+alias p='python'
+
+alias c='./app/console'
+alias ccc='./app/console ca:c'
+
+alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
+alias sqltags='ctags --languages=+SQL'
 
 # git aliases
 alias g='git'
@@ -44,18 +57,7 @@ alias gp='git push'
 alias gd='git diff'
 alias gc='git commit -v'
 alias gco='git checkout'
-
-alias mkdir='mkdir -p'
-alias h='history'
-
-alias clisp='clisp -q -modern'
-alias p='python'
-alias c='./app/console'
-alias ccc='./app/console ca:c'
-alias cass='./app/console assetic:dump --watch'
-
-alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
-alias sqltags='ctags --languages=+SQL'
+alias gba='git branch -av'
 
 # Git completion
 source ~/.git-completion.bash
