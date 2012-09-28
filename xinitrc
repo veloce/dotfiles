@@ -1,7 +1,5 @@
 #!/bin/sh
 
-setxkbmap -layout us -variant euro
-
 # compose key
 setxkbmap -option compose:prsc
 
