@@ -35,7 +35,7 @@ URxvt.color7:      gray90
 
 URxvt.intensityStyles: true
 URxvt.urgentOnBell:    true
-URxvt.cursorBlink:     true
+URxvt.cursorBlink:     false
 
 ! Yankable urls
 URxvt.perl-ext:      default,url-select
