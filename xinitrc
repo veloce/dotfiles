@@ -15,4 +15,6 @@ xrdb -merge $HOME/.Xresources
 # redshift
 redshift &
 
+urxvtd -q -o -f
+
 exec xmonad
