@@ -29,3 +29,4 @@ link redshift.conf ~/.config/redshift.conf
 link mplayer.conf ~/.mplayer/config
 link xmonad.hs ~/.xmonad/xmonad.hs
 link xinitrc ~/.xinitrc
+link ghci ~/.ghci
