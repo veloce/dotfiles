@@ -12,6 +12,7 @@
 [core]
     editor = vim -u $HOME/.vimrc_git -X
     autocrlf = input
+    excludesfile = ~/.dotfiles/gitignore
 [alias]
     co = checkout
     br = branch
