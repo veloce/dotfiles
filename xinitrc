@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # compose key
-setxkbmap -option compose:prsc
+# /usr/share/X11/xkb/rules/base.lst
+setxkbmap -option compose:lwin
 
 # kill X with ctrl-alt-backspace sequence
 setxkbmap -option terminate:ctrl_alt_bksp
