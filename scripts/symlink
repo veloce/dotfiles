@@ -8,7 +8,7 @@ link (){
 
     echo "ln -s $target $link"
 
-    rm -f $link
+    rm -rf $link
     ln -s $target $link
 }
 
@@ -31,3 +31,4 @@ link xmonad.hs ~/.xmonad/xmonad.hs
 link xinitrc ~/.xinitrc
 link ghci ~/.ghci
 link mpd ~/.mpd
+link tmuxinator ~/.tmuxinator

@@ -9,6 +9,8 @@ shopt -s checkwinsize
 
 [ -d $HOME/src/play ] && export PATH=$PATH:$HOME/src/play
 
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
 # disable xrvt freeze with ctrl-s and ctrl-q
 stty -ixon -ixoff
 

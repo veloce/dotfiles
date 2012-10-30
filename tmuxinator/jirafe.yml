@@ -1,0 +1,17 @@
+# ~/.tmuxinator/jirafe.yml
+
+project_name: jirafe
+project_root: ~/dev/jirafe/api
+pre: ~/.dotfiles/scripts/startd
+tabs:
+  - api: cd ~/dev/jirafe/api
+  - daemons:
+      layout: even-horizontal
+      panes:
+        - cd ~/scripts && java -jar selenium-server-standalone-2.25.0.jar
+        - cd ~/dev/jirafe/api && php app/console jirafe:assets:dump --watch
+  - charon:
+      layout: even-horizontal
+      panes:
+        - cd ~/dev/jirafe/charon && vim
+        - cd ~/dev/jirafe/charon && bin/start
