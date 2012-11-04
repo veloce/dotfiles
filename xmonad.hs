@@ -65,7 +65,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                  xK_Print ), spawn "scrot")
     , ((shiftMask,          xK_Print ), spawn "sleep 0.2; scrot -s")
 
-    , ((modm,               xK_d     ), spawn "date +%c | dzen2 -p 2")
+    , ((modm,               xK_d     ), spawn "date +'%c' | dzen2 -fn xft:Inconsolata:size=24 -p 2 -x 400 -y 300 -w 800 -ta c -h 70")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
