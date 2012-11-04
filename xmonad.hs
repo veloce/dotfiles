@@ -63,7 +63,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- screenshot
     , ((0,                  xK_Print ), spawn "scrot")
-    , ((shiftMask,          xK_Print ), spawn "scrot -s")
+    , ((shiftMask,          xK_Print ), spawn "sleep 0.2; scrot -s")
 
     , ((modm,               xK_d     ), spawn "date +%c | dzen2 -p 2")
 
