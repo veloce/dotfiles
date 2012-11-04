@@ -61,8 +61,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
-    -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+    -- screenshot
+    , ((0,                  xK_Print ), spawn "scrot")
+    , ((shiftMask,          xK_Print ), spawn "scrot -s")
+
+    , ((modm,               xK_d     ), spawn "date +%c | dzen2 -p 2")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
