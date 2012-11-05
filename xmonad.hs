@@ -66,6 +66,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((shiftMask,          xK_Print ), spawn "sleep 0.2; scrot -s")
 
     , ((modm,               xK_d     ), spawn "date +'%c' | dzen2 -fn xft:Inconsolata:size=24 -p 2 -x 400 -y 300 -w 800 -ta c -h 70")
+    , ((modm,               xK_b     ), spawn "acpi -V | head -2 | awk '{$1=$2=\"\"; print $0}' | dzen2 -fn xft:Inconsolata:size=24 -p 2 -x 400 -y 300 -w 800 -ta c -sa c -h 70 -l 1 -e onstart=uncollapse")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
