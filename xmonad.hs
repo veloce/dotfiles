@@ -68,6 +68,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_d     ), spawn "date +'%c' | dzen2 -fn xft:Inconsolata:size=24 -p 2 -x 400 -y 300 -w 800 -ta c -h 70")
     , ((modm,               xK_b     ), spawn "acpi -V | head -2 | awk '{$1=$2=\"\"; print $0}' | dzen2 -fn xft:Inconsolata:size=24 -p 2 -x 400 -y 300 -w 800 -ta c -sa c -h 70 -l 1 -e onstart=uncollapse")
 
+    -- switch keyboard layout us / us-intl
+    , ((modm .|. shiftMask, xK_s     ), spawn "~/.dotfiles/scripts/skl.sh")
+
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
