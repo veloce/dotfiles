@@ -1,9 +1,6 @@
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
 	url = http://github.com/edsono/vim-matchit.git
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = http://github.com/ervandew/supertab.git
 [submodule "vim/bundle/lusty"]
 	path = vim/bundle/lusty
 	url = http://github.com/sjbach/lusty.git
@@ -64,9 +61,6 @@
 [submodule "vim/bundle/camelCaseMotion"]
 	path = vim/bundle/camelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
-[submodule "vim/bundle/symfony"]
-	path = vim/bundle/symfony
-	url = https://github.com/docteurklein/vim-symfony.git
 [submodule "vim/bundle/gundo"]
 	path = vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
@@ -103,3 +97,6 @@
 [submodule "vim/bundle/gist"]
 	path = vim/bundle/gist
 	url = https://github.com/mattn/gist-vim.git
+[submodule "vim/bundle/neocomplcache"]
+	path = vim/bundle/neocomplcache
+	url = https://github.com/Shougo/neocomplcache.git

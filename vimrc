@@ -118,9 +118,19 @@ let g:pydoc_highlight = 0
 " pasta
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat']
 
-" supertab
-"let g:SuperTabDefaultCompletionType = context
-let g:SuperTabLeadingSpaceCompletion = 0
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_enable_cursor_hold_i = 1
+" let g:neocomplcache_enable_insert_char_pre = 1
+" <CR>: close popup and save indent.
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " syntastic options
 let g:syntastic_enable_signs=1
@@ -154,9 +164,6 @@ vmap <leader>a y:Ack '<C-R>"'<CR>
 
 " indents guides
 let g:indent_guides_guide_size = 1
-
-" snipMate
-let g:snips_author = "Vincent Velociter"
 
 "}}}
 " CUSTOM COMMANDS {{{
