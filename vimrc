@@ -122,6 +122,7 @@ let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat'
 let g:neocomplcache_enable_at_startup = 1
 " let g:neocomplcache_enable_cursor_hold_i = 1
 " let g:neocomplcache_enable_insert_char_pre = 1
+let g:neocomplcache_min_syntax_length = 3
 " <CR>: close popup and save indent.
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 " <TAB>: completion.
