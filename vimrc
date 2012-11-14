@@ -165,6 +165,7 @@ nnoremap <F5> :GundoToggle<CR>
 " Fugitive
 command! -complete=file -nargs=+ GGrep execute "silent! Ggrep" . <q-args> . " | copen | redraw!"
 nmap <leader>g :GGrep '<C-R><C-W>'<CR>
+vmap <leader>g y:GGrep '<C-R>"'<CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Lusty
