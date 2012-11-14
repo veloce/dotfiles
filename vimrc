@@ -122,12 +122,9 @@ let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat'
 let g:neocomplcache_enable_at_startup = 1
 " let g:neocomplcache_enable_cursor_hold_i = 1
 " let g:neocomplcache_enable_insert_char_pre = 1
-let g:neocomplcache_min_syntax_length = 3
-" <CR>: close popup and save indent.
+" let g:neocomplcache_min_syntax_length = 3
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
