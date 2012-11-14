@@ -8,6 +8,7 @@
 --
 
 import XMonad
+import XMonad.Hooks.DynamicLog
 import Data.Monoid
 import System.Exit
 
@@ -50,6 +51,11 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 myNormalBorderColor  = "#dddddd"
 myFocusedBorderColor = "#ff0000"
 
+-- status bar
+myBar = "xmobar"
+
+myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
+
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 --
@@ -64,9 +70,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- screenshot
     , ((0,                  xK_Print ), spawn "scrot")
     , ((shiftMask,          xK_Print ), spawn "sleep 0.2; scrot -s")
-
-    , ((modm,               xK_d     ), spawn "date +'%c' | dzen2 -fn xft:Inconsolata:size=24 -p 2 -x 400 -y 300 -w 800 -ta c -h 70")
-    , ((modm,               xK_b     ), spawn "acpi -V | head -2 | awk '{$1=$2=\"\"; print $0}' | dzen2 -fn xft:Inconsolata:size=24 -p 2 -x 400 -y 300 -w 800 -ta c -sa c -h 70 -l 1 -e onstart=uncollapse")
 
     -- switch keyboard layout us / us-intl
     , ((modm .|. shiftMask, xK_s     ), spawn "~/.dotfiles/scripts/skl.sh")
@@ -123,7 +126,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+    , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
@@ -250,7 +253,7 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = xmonad =<< statusBar myBar myPP toggleStrutsKey defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will

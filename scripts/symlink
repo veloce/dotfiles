@@ -32,3 +32,4 @@ link xinitrc ~/.xinitrc
 link ghci ~/.ghci
 link mpd ~/.mpd
 link tmuxinator ~/.tmuxinator
+link xmobarrc ~/.xmobarrc
