@@ -56,6 +56,9 @@ myBar = "xmobar"
 
 myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 
+-- Key binding to toggle the gap for the bar.
+toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
+
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 --
@@ -126,7 +129,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     --
-    , ((modm              , xK_b     ), sendMessage ToggleStruts)
+    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
