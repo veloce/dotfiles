@@ -120,8 +120,6 @@ vnoremap <silent> # :<C-U>
 " convert char to htmlentity with php
 nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT_COMPAT, 'UTF-8');"))<CR>p
 
-nmap <F7> :TagbarToggle<CR>
-
 " }}}
 " PLUGINS SETTINGS {{{
 " -------------------
