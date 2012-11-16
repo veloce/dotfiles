@@ -136,6 +136,11 @@ let g:neocomplcache_enable_at_startup = 1
 " let g:neocomplcache_enable_cursor_hold_i = 1
 " let g:neocomplcache_enable_insert_char_pre = 1
 " let g:neocomplcache_min_syntax_length = 3
+if !exists('g:neocomplcache_omni_patterns')
+    let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.behat = '\(When\|Then\|Given\|And\)\s.*$'
+let g:neocomplcache_skip_auto_completion_time = "1"
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
