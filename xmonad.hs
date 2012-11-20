@@ -68,7 +68,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run -fn Inconsolata-14")
+    , ((modm,               xK_p     ), spawn "$(yeganesh -x -- -fn Inconsolata-14) &")
 
     -- screenshot
     , ((0,                  xK_Print ), spawn "scrot")
