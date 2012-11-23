@@ -140,7 +140,13 @@ if !exists('g:neocomplcache_omni_patterns')
     let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.behat = '\(When\|Then\|Given\|And\)\s.*$'
-let g:neocomplcache_skip_auto_completion_time = "1"
+if !exists('g:neocomplcache_same_filetype_lists')
+  let g:neocomplcache_same_filetype_lists = {}
+endif
+let g:neocomplcache_same_filetype_lists.php = 'twig,htmljinja,behat,yaml,javascript'
+let g:neocomplcache_same_filetype_lists.yaml = 'php'
+let g:neocomplcache_same_filetype_lists.htmljinja = 'php,javascript'
+let g:neocomplcache_same_filetype_lists.javascript = 'php'
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
