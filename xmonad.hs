@@ -74,9 +74,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                  xK_Print ), spawn "scrot")
     , ((shiftMask,          xK_Print ), spawn "sleep 0.2; scrot -s")
 
-    -- switch keyboard layout us / us-intl
-    , ((modm .|. shiftMask, xK_s     ), spawn "~/.dotfiles/scripts/skl.sh")
-
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
 
