@@ -145,8 +145,9 @@ if !exists('g:neocomplcache_same_filetype_lists')
 endif
 let g:neocomplcache_same_filetype_lists.php = 'twig,htmljinja,behat,yaml,javascript'
 let g:neocomplcache_same_filetype_lists.yaml = 'php'
-let g:neocomplcache_same_filetype_lists.htmljinja = 'php,javascript'
+let g:neocomplcache_same_filetype_lists.htmljinja = 'php,javascript,css'
 let g:neocomplcache_same_filetype_lists.javascript = 'php'
+let g:neocomplcache_same_filetype_lists.html = 'css,javascript'
 let g:neocomplcache_same_filetype_lists.css = 'twig,html,htmljinja,javascript'
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
