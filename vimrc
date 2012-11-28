@@ -146,7 +146,7 @@ endif
 let g:neocomplcache_same_filetype_lists.php = 'twig,htmljinja,behat,yaml,javascript'
 let g:neocomplcache_same_filetype_lists.yaml = 'php'
 let g:neocomplcache_same_filetype_lists.htmljinja = 'php,javascript,css'
-let g:neocomplcache_same_filetype_lists.javascript = 'php'
+let g:neocomplcache_same_filetype_lists.javascript = 'php,html,htmljinja'
 let g:neocomplcache_same_filetype_lists.html = 'css,javascript'
 let g:neocomplcache_same_filetype_lists.css = 'twig,html,htmljinja,javascript'
 let g:neocomplcache_same_filetype_lists.gitcommit = '_'
