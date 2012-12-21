@@ -41,7 +41,7 @@ set smartcase                         " case-sensitive search if expression cont
 set statusline=%{fugitive#statusline()}
 set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
 set tags+=vendor.tags
-set wildignore=*/cache/*,*/logs/*,*/build/*,*.py[co],*.class,*.o,*.so,*.hi,tags,*/web/bundles,*/web/css,*/web/js,*/web/dashboard
+set wildignore=*/cache/*,*/logs/*,*/build/*,*.py[co],*.class,*.o,*.so,*.hi,tags,*/web/bundles,*/web/css,*/web/js,*/web/dashboard,*/cache-backup_asd
 set wildmenu                          " Better command-line completion
 set wildmode=list:longest
 
