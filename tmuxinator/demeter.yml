@@ -1,0 +1,11 @@
+# ~/.tmuxinator/jirafe.yml
+
+project_name: demeter
+project_root: ~/dev/jirafe/demeter
+pre: ~/.dotfiles/scripts/startd && ~/dev/jirafe/charon/bin/start
+tabs:
+  - demeter:
+      layout: even-horizontal
+      panes:
+        - cd ~/dev/jirafe/demeter && vim
+        - cd ~/dev/jirafe/demeter && bin/play
