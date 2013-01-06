@@ -25,6 +25,7 @@ nmap <buffer> <F6> <Esc>:DisablePHPFolds<Cr>
 let g:DisableAutoPHPFolding = 1
 
 " jump to a twig view in symfony
+setlocal path+=**
 function! s:SfJumpToView()
     mark C
     normal! ]M

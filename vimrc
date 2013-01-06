@@ -16,6 +16,7 @@ colorscheme aldmeris
 
 " OPTIONS {{{
 " -----------
+set autoread
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
 set completeopt=menuone,preview
 set cmdheight=2                       " command bar height
@@ -32,7 +33,6 @@ set nobackup                          " Don't make a backup before overwriting a
 set nostartofline                     " Stop certain movements from always going to the first character of a line.
 set nowritebackup
 set number
-set path+=**
 set ruler
 set scrolloff=5                       " context around cursor
 set showcmd                           " Show partial commands in the last line of the screen
