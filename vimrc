@@ -178,6 +178,9 @@ nnoremap <F5> :GundoToggle<CR>
 command! -complete=file -nargs=+ GGrep execute "silent! Ggrep" . <q-args> . " | copen | redraw!"
 nmap <leader>g :GGrep '<C-R><C-W>'<CR>
 vmap <leader>g y:GGrep '<C-R>"'<CR>
+" jirafe shortcut
+nmap <leader>j :GGrep '<C-R><C-W>' <C-R>=matchlist(expand('%:p:h'), 'jirafe\/core\/\(\w\+\)')[1]<CR><CR>
+vmap <leader>j y:GGrep '<C-R>"' <C-R>=matchlist(expand('%:p:h'), 'jirafe\/core\/\(\w\+\)')[1]<CR><CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Lusty
