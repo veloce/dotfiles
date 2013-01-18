@@ -4,7 +4,7 @@ setlocal tabstop=2
 setlocal shiftwidth=2
 setlocal softtabstop=2
 
-if match(expand('%:p:h'), 'jirafe\/api\/src') != -1
+if match(expand('%:p:h'), 'core\/jirafe\/src') != -1
     let b:behat_cmd_args = '-c behat/behat.yml'
 endif
 
