@@ -2,7 +2,7 @@ export EDITOR=vim
 
 # history
 export HISTCONTROL=erasedups
-export HISTSIZE=10000
+export HISTSIZE=100000
 shopt -s histappend
 
 shopt -s checkwinsize
