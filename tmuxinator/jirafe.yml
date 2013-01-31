@@ -14,4 +14,4 @@ tabs:
       layout: even-horizontal
       panes:
         - cd ~/dev/jirafe/core/charon
-        - cd ~/dev/jirafe/core/charon && ./run
+        - cd ~/dev/jirafe/core/charon && ./bin/play "run 9029"
