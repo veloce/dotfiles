@@ -1,4 +1,5 @@
 export EDITOR=vim
+export BROWSER=firefox
 
 # history
 export HISTCONTROL=erasedups
