@@ -91,9 +91,6 @@
 [submodule "vim/bundle/gist"]
 	path = vim/bundle/gist
 	url = https://github.com/mattn/gist-vim.git
-[submodule "vim/bundle/neocomplcache"]
-	path = vim/bundle/neocomplcache
-	url = https://github.com/Shougo/neocomplcache.git
 [submodule "vim/bundle/characterize"]
 	path = vim/bundle/characterize
 	url = https://github.com/tpope/vim-characterize.git
@@ -109,3 +106,6 @@
 [submodule "vim/bundle/ghcmod"]
 	path = vim/bundle/ghcmod
 	url = https://github.com/eagletmt/ghcmod-vim.git
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

@@ -76,6 +76,9 @@ map <tab><tab> <C-^>
 " Map Y to yank until EOL, rather than act as yy,
 map Y y$
 
+" toggle folds
+nnoremap <space> za
+
 " clear search highlight
 nnoremap <C-L> :nohl<CR><C-L>
 
@@ -130,32 +133,6 @@ let g:pydoc_highlight = 0
 
 " pasta
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat']
-
-" neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-" let g:neocomplcache_enable_cursor_hold_i = 1
-" let g:neocomplcache_enable_insert_char_pre = 1
-" let g:neocomplcache_min_syntax_length = 3
-if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
-endif
-let g:neocomplcache_omni_patterns.behat = '\(When\|Then\|Given\|And\)\s.*$'
-if !exists('g:neocomplcache_same_filetype_lists')
-  let g:neocomplcache_same_filetype_lists = {}
-endif
-let g:neocomplcache_same_filetype_lists.php = 'twig,htmljinja,behat,yaml,javascript'
-let g:neocomplcache_same_filetype_lists.yaml = 'php'
-let g:neocomplcache_same_filetype_lists.htmljinja = 'php,javascript,css'
-let g:neocomplcache_same_filetype_lists.javascript = 'php,html,htmljinja'
-let g:neocomplcache_same_filetype_lists.html = 'css,javascript'
-let g:neocomplcache_same_filetype_lists.css = 'twig,html,htmljinja,javascript'
-let g:neocomplcache_same_filetype_lists.gitcommit = '_'
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " syntastic options
 let g:syntastic_enable_signs=1
