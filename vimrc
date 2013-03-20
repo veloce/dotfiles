@@ -123,6 +123,9 @@ vnoremap <silent> # :<C-U>
 " convert char to htmlentity with php
 nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT_COMPAT, 'UTF-8');"))<CR>p
 
+" perform a vimgrep with last search
+nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
+
 " }}}
 " PLUGINS SETTINGS {{{
 " -------------------
