@@ -1,0 +1,10 @@
+project_name: lila
+project_root: ~/dev/lila
+pre: sudo systemctl start mongodb.service && sudo -u elasticsearch /usr/share/elasticsearch/bin/elasticsearch
+tabs:
+  - main:
+      layout: even-horizontal
+      panes:
+        - cd ~/dev/lila && vim
+        - cd ~/dev/lila && ./bin/play
+  - shell: cd ~/dev/lila
