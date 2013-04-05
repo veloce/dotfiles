@@ -1,4 +1,4 @@
---languages=PHP,JavaScript,Python
+--languages=PHP,JavaScript,Python,Java
 --totals=yes
 --tag-relative=yes
 --recurse 
