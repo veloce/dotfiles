@@ -142,7 +142,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=1
 " let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active',
-                            \ 'passive_filetypes': ['scala'] }
+                            \ 'passive_filetypes': ['scala', 'java'] }
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
