@@ -130,6 +130,9 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 " PLUGINS SETTINGS {{{
 " -------------------
 
+" youcompleteme
+let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1, 'php': 1}
+
 " pydoc
 let g:pydoc_open_cmd = 'vsplit'
 let g:pydoc_highlight = 0
