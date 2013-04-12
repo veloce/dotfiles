@@ -85,6 +85,10 @@ nnoremap <C-L> :nohl<CR><C-L>
 " JSON indent mapping
 vmap <leader>ij :!python -mjson.tool<CR>
 
+" align to first : char (useful for json)
+vmap <C-a> :Tab /^[^:]*:\zs
+cmap <C-a> Tab /^[^:]*:\zs
+
 " in current directory operations
 nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
@@ -105,7 +109,7 @@ endif
 " replace several times made easy
 vmap <leader>p "0p
 
-" Replace visual selection
+" Replace visual selection with content of unnamed buffer
 vnoremap <C-r> y:%s/<C-R>=escape(@", '/\')<cr>/
 
 " Search for selected text, forwards or backwards.
@@ -162,9 +166,6 @@ nnoremap <F5> :GundoToggle<CR>
 command! -complete=file -nargs=+ GGrep execute "silent! Ggrep" . <q-args> . " | copen | redraw!"
 nmap <leader>g :GGrep '<C-R><C-W>'<CR>
 vmap <leader>g y:GGrep '<C-R>"'<CR>
-" jirafe shortcut
-nmap <leader>j :GGrep '<C-R><C-W>' <C-R>=matchlist(expand('%:p:h'), 'jirafe\/core\/\(\w\+\)')[1]<CR><CR>
-vmap <leader>j y:GGrep '<C-R>"' <C-R>=matchlist(expand('%:p:h'), 'jirafe\/core\/\(\w\+\)')[1]<CR><CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Lusty
