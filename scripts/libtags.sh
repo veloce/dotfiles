@@ -10,7 +10,6 @@ usage() {
     echo
     echo "OPTIONS:"
     echo "-l Language: either java or scala"
-    exit 1
 }
 
 lang=
@@ -20,8 +19,12 @@ copy_cmd=
 while getopts l: opt
 do
     case $opt in
-        l) lang="$OPTARG";;
-        ?) usage;;
+        l) 
+            lang="$OPTARG";;
+        h) 
+            usage
+            exit 0
+            ;;
     esac
 done
 
@@ -36,7 +39,9 @@ case $lang in
         target_dir=$HOME/.java-srcs
         copy_cmd="find . -type f -name *sources.jar -exec cp --parents {} $target_dir/ \;"
         ;;
-    *) usage
+    *) 
+        usage
+        exit 1
         ;;
 esac
 
