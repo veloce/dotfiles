@@ -9,6 +9,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 [ -d $HOME/src/play ] && export PATH=$PATH:$HOME/src/play
+[ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
