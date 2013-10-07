@@ -1,5 +1,4 @@
 sudo systemctl start postgresql
-sudo systemctl start mysqld
 sudo systemctl start redis
 sudo systemctl start nginx
 sudo systemctl start php-fpm
