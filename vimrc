@@ -134,6 +134,9 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 " PLUGINS SETTINGS {{{
 " -------------------
 
+" dbext
+let g:dbext_default_history_file = '$HOME/.vim/dbext_history.txt'
+
 " youcompleteme
 let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1, 'php': 1}
 
