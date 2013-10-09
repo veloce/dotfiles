@@ -14,8 +14,7 @@ xmodmap $HOME/.Xmodmap &&
 
 xrdb -merge $HOME/.Xresources
 
-# redshift
-redshift &
+# redshift &
 
 urxvtd -q -o -f
 
