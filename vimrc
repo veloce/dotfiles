@@ -12,8 +12,8 @@ syntax on
 set background=dark
 set t_Co=256
 " let g:aldmeris_termcolors="tango"
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-tomorrow
+" let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme aldmeris
 
 " OPTIONS {{{
 " -----------
