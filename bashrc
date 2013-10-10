@@ -1,6 +1,3 @@
-# base16 theme setup
-. ~/.dotfiles/scripts/base16-tomorrow.dark.sh
-
 export EDITOR=vim
 export BROWSER=firefox
 
