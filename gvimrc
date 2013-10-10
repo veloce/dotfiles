@@ -8,7 +8,7 @@ set guioptions-=L
 " disable popup dialogs
 set guioptions+=c
 
-colorscheme aldmeris
+colorscheme base16-tomorrow
 if &l:diff
   set guifont=Inconsolata\ 10
 else

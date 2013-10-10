@@ -6,7 +6,8 @@
 
 
 ! -- Colorscheme -- !
-#include "xcolors/tango"
+/* #include "xcolors/tango" */
+#include "xcolors/base16-tomorrow.dark.xresources"
 
 ! -- Fonts {{{
 Xft.autohint:      false
@@ -27,11 +28,11 @@ URxvt.visualBell:  false
 URxvt.depth:       24
 URxvt.buffered:    true
 
-URxvt.background:  #272727
-URxvt.foreground:  #fbfbfb
+URxvt.background:  base00
+URxvt.foreground:  base05
 URxvt.transparent: false
 URxvt.shading:     100
-URxvt.color7:      gray90
+/* URxvt.color7:      base05 */
 
 URxvt.intensityStyles: true
 URxvt.urgentOnBell:    true
