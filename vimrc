@@ -9,10 +9,10 @@ let g:feature_filetype='behat'
 filetype indent plugin on
 syntax on
 
-set background=dark
 set t_Co=256
-let g:aldmeris_termcolors="tango"
-colorscheme aldmeris
+set background=dark
+let g:solarized_menu=0
+colorscheme solarized
 
 " OPTIONS {{{
 " -----------

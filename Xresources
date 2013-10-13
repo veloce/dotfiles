@@ -6,7 +6,8 @@
 
 
 ! -- Colorscheme -- !
-#include "xcolors/tango"
+/* #include "xcolors/tango" */
+#include "xcolors/solarized"
 
 ! -- Fonts {{{
 Xft.autohint:      false
@@ -27,8 +28,13 @@ URxvt.visualBell:  false
 URxvt.depth:       24
 URxvt.buffered:    true
 
+<<<<<<< Updated upstream
 URxvt.background:  #272727
 URxvt.foreground:  #fbfbfb
+=======
+/* URxvt.background:  base00 */
+/* URxvt.foreground:  base05 */
+>>>>>>> Stashed changes
 URxvt.transparent: false
 URxvt.shading:     100
 URxvt.color7:      gray90
