@@ -12,7 +12,7 @@ setxkbmap -option terminate:ctrl_alt_bksp
 
 xmodmap $HOME/.Xmodmap &&
 
-xrdb -merge $HOME/.Xresources
+xrdb $HOME/.Xresources
 
 # redshift &
 
