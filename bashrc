@@ -35,8 +35,8 @@ if [ -x /usr/bin/dircolors ] || [ -x /bin/dircolors ]; then
 fi
 
 # aliases
-alias l='ls -Al'
-alias ll='ls -l'
+alias l='ls -Alh'
+alias ll='ls -lh'
 alias la='ls -a'   # show hidden files
 alias lx='ls -lXB'  # sort by extension
 alias lk='ls -lSr'  # sort by size, biggest last
