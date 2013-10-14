@@ -19,6 +19,7 @@ link vimrc ~/.vimrc
 link vimrc_git ~/.vimrc_git
 link gvimrc ~/.gvimrc
 link Xresources ~/.Xresources
+link Xresources.light ~/.Xresources.light
 link ackrc ~/.ackrc
 link git-completion.bash ~/.git-completion.bash
 link tmux.conf ~/.tmux.conf
@@ -33,3 +34,8 @@ link ghci ~/.ghci
 link mpd ~/.mpd
 link tmuxinator ~/.tmuxinator
 link xmobarrc ~/.xmobarrc
+
+# scripts
+link scripts/fsize ~/bin/fsize
+link scripts/startd ~/bin/startd
+link scripts/xcolors ~/bin/xcolors

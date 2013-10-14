@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [[ $1 == "light" ]]; then
+    xrdb -merge ~/.Xresources.light
+else
+    xrdb -merge ~/.Xresources
+fi
+

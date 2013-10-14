@@ -1,0 +1,4 @@
+! vim:ft=xdefaults
+! --------------------------------------
+
+#include "xcolors/solarized.light"
