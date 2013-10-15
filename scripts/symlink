@@ -34,6 +34,8 @@ link ghci ~/.ghci
 link mpd ~/.mpd
 link tmuxinator ~/.tmuxinator
 link xmobarrc ~/.xmobarrc
+link ranger/rc.conf ~/.config/ranger/rc.conf
+link ranger/colorschemes ~/.config/ranger/colorschemes
 
 # scripts
 link scripts/fsize ~/bin/fsize
