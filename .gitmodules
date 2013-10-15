@@ -67,9 +67,6 @@
 [submodule "vim/bundle/behat"]
 	path = vim/bundle/behat
 	url = https://github.com/veloce/vim-behat.git
-[submodule "vim/bundle/jellybeans"]
-	path = vim/bundle/jellybeans
-	url = https://github.com/nanotech/jellybeans.vim.git
 [submodule "vim/bundle/pasta"]
 	path = vim/bundle/pasta
 	url = https://github.com/sickill/vim-pasta.git
@@ -79,9 +76,6 @@
 [submodule "vim/bundle/pydoc"]
 	path = vim/bundle/pydoc
 	url = https://github.com/fs111/pydoc.vim.git
-[submodule "vim/bundle/mac-classic-theme"]
-	path = vim/bundle/mac-classic-theme
-	url = https://github.com/nelstrom/vim-mac-classic-theme.git
 [submodule "vim/bundle/commaobject"]
 	path = vim/bundle/commaobject
 	url = https://github.com/austintaylor/vim-commaobject.git
