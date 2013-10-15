@@ -37,9 +37,6 @@
 [submodule "vim/bundle/aldmeris"]
 	path = vim/bundle/aldmeris
 	url = https://github.com/veloce/vim-aldmeris.git
-[submodule "vim/bundle/solarized"]
-	path = vim/bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/git"]
 	path = vim/bundle/git
 	url = https://github.com/tpope/vim-git.git
