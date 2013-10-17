@@ -109,7 +109,7 @@ endif
 " replace several times made easy
 vmap <leader>p "0p
 
-" Replace visual selection with content of unnamed buffer
+" Trigger a whole replace from visual selection
 vnoremap <C-r> y:%s/<C-R>=escape(@", '/\')<cr>/
 
 " Search for selected text, forwards or backwards.
