@@ -232,16 +232,9 @@ com! DiffSaved call s:DiffWithSaved()
 
 " Clean code function
 function! s:CleanCode()
-  let l = line(".")
-  let c = col(".")
   %retab " Replace tabs with spaces
   %s= *$==e " Delete end of line blanks
-  " fix mixtures of CRLF/LF by converting to unix format
-  " (http://vim.wikia.com/wiki/File_Format)
-  update
-  e ++ff=dos
-  setlocal ff=unix
-  call cursor(l, c)
+  %s/\r//eg " Remove DOS returns ^M
   echo "Cleaned up this mess."
 endfunction
 com! CleanCode call s:CleanCode()
