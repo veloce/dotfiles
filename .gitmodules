@@ -109,3 +109,6 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "vim/bundle/play2"]
+	path = vim/bundle/play2
+	url = https://github.com/gre/play2vim.git
