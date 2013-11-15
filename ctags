@@ -1,5 +1,6 @@
 --languages=PHP,JavaScript,Python,Java
 --totals=yes
+--fields=+l
 --tag-relative=yes
 --recurse 
 
