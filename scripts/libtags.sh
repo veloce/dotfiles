@@ -16,6 +16,7 @@ lang=
 libs_dir=
 target_dir=
 copy_cmd=
+ctags_option=
 while getopts l: opt
 do
     case $opt in
@@ -33,11 +34,13 @@ case $lang in
         libs_dir=$HOME/.ivy2
         target_dir=$HOME/.scala-srcs
         copy_cmd="find . -type d -name srcs -exec cp -r --parents {} $target_dir/ \;"
+        ctags_option=scala
         ;;
     java) 
         libs_dir=$HOME/.m2
         target_dir=$HOME/.java-srcs
         copy_cmd="find . -type f -name *sources.jar -exec cp --parents {} $target_dir/ \;"
+        ctags_option=Java
         ;;
     *) 
         usage
@@ -67,4 +70,4 @@ done
 
 # generate ctags
 cd $target_dir
-ctags
+ctags --languages=$ctags_option
