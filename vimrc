@@ -51,8 +51,10 @@ set autoindent
 set expandtab
 set smartindent
 set tabstop=4
+set shiftround
 set shiftwidth=4
 set softtabstop=4
+set smarttab
 
 " I have to set this here because of javascript bundle
 autocmd FileType php setlocal iskeyword-=$
@@ -139,6 +141,9 @@ let g:dbext_default_history_file = '$HOME/.vim/dbext_history.txt'
 
 " youcompleteme
 let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1, 'php': 1}
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 
 " pydoc
 let g:pydoc_open_cmd = 'vsplit'
