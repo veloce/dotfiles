@@ -112,3 +112,6 @@
 [submodule "vim/bundle/play2"]
 	path = vim/bundle/play2
 	url = https://github.com/gre/play2vim.git
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git

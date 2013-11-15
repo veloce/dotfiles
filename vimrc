@@ -145,6 +145,10 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 
+" ultisnips
+let g:UltiSnipsExpandTrigger = '<C-s>'
+let g:UltiSnipsListSnippets = '<C-e>'
+
 " pydoc
 let g:pydoc_open_cmd = 'vsplit'
 let g:pydoc_highlight = 0
