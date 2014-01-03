@@ -15,6 +15,7 @@ xmodmap $HOME/.Xmodmap &&
 xrdb $HOME/.Xresources
 
 # redshift &
+[ -x `which xbindkeys` ] && xbindkeys
 
 urxvtd -q -o -f
 

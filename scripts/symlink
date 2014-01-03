@@ -34,6 +34,7 @@ link ghci ~/.ghci
 link mpd ~/.mpd
 link tmuxinator ~/.tmuxinator
 link xmobarrc ~/.xmobarrc
+link xbindkeysrc ~/.xbindkeysrc
 link ranger/rc.conf ~/.config/ranger/rc.conf
 link ranger/colorschemes ~/.config/ranger/colorschemes
 
