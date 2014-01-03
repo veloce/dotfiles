@@ -1,0 +1,8 @@
+clear control
+clear mod4
+
+keycode 37 = Control_L
+keycode 134 = Control_R
+add control = Control_L Control_R
+
+add mod4 = Super_L
