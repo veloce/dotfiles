@@ -14,8 +14,9 @@ xmodmap $HOME/.Xmodmap &&
 
 xrdb $HOME/.Xresources
 
+pulseaudio --start
+
 # redshift &
-[ -x `which xbindkeys` ] && xbindkeys
 
 urxvtd -q -o -f
 
