@@ -14,6 +14,8 @@ xmodmap $HOME/.Xmodmap &&
 
 xrdb $HOME/.Xresources
 
+pulseaudio --start
+
 # redshift &
 
 urxvtd -q -o -f

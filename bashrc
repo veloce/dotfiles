@@ -99,7 +99,7 @@ function extract()
 }
 
 # Open man pages in vim
-function vman()
+function man()
 {
-    vim -u ".vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
+    vim -u "~/.vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
