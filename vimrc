@@ -136,6 +136,10 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 " PLUGINS SETTINGS {{{
 " -------------------
 
+" airline
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+
 " dbext
 let g:dbext_default_history_file = '$HOME/.vim/dbext_history.txt'
 
