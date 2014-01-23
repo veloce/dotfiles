@@ -11,6 +11,8 @@ shopt -s checkwinsize
 [ -d $HOME/src/play ] && export PATH=$PATH:$HOME/src/play
 [ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
 
+export PATH=$PATH:$HOME/android-sdk/sdk/platform-tools/:$HOME/android-sdk/sdk/tools/
+
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # disable xrvt freeze with ctrl-s and ctrl-q
@@ -26,8 +28,8 @@ parse_git_branch() {
 PS1="\[\033[1;34m\]@\h \w\$(parse_git_branch) $\[\033[0m\] "
 
 # enable color support of ls and also add handy aliases
-eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
-alias ls='ls --color=auto'
+# eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
+# alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 
@@ -46,6 +48,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
+alias vim='mvim -v'
 
 alias c='./app/console'
 alias ccc='./app/console ca:c'
@@ -66,7 +69,7 @@ alias gba='git branch -av'
 source ~/.git-completion.bash
 
 # Display a random adage each time bash is called
-[ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
+# [ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
@@ -99,7 +102,7 @@ function extract()
 }
 
 # Open man pages in vim
-function man()
+function vman()
 {
     vim -u "~/.vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
