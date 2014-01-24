@@ -49,6 +49,7 @@ alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
 alias vim='mvim -v'
+alias vimdiff='mvimdiff -v'
 
 alias c='./app/console'
 alias ccc='./app/console ca:c'
