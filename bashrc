@@ -28,8 +28,8 @@ parse_git_branch() {
 PS1="\[\033[1;34m\]@\h \w\$(parse_git_branch) $\[\033[0m\] "
 
 # enable color support of ls and also add handy aliases
-# eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
-# alias ls='ls --color=auto'
+eval $(gdircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
+alias ls='gls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 
@@ -50,6 +50,7 @@ alias clisp='clisp -q -modern'
 alias p='python'
 alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
+alias tmux='TMUX=screen-256color-bce tmux'
 
 alias c='./app/console'
 alias ccc='./app/console ca:c'
