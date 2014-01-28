@@ -50,7 +50,7 @@ alias clisp='clisp -q -modern'
 alias p='python'
 alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
-alias tmux='TMUX=screen-256color-bce tmux'
+alias tmux="TERM=screen-256color-bce tmux"
 
 alias c='./app/console'
 alias ccc='./app/console ca:c'
