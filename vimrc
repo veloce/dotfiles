@@ -139,12 +139,6 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 " dbext
 let g:dbext_default_history_file = '$HOME/.vim/dbext_history.txt'
 
-" youcompleteme
-let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1, 'php': 1}
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-
 " ultisnips
 let g:UltiSnipsExpandTrigger = '<C-s>'
 let g:UltiSnipsListSnippets = '<C-e>'
