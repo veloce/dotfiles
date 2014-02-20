@@ -124,3 +124,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "vim/bundle/jdaddy"]
+	path = vim/bundle/jdaddy
+	url = https://github.com/tpope/vim-jdaddy.git
