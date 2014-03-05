@@ -1,6 +1,6 @@
 if exists("b:did_ftplugin") | finish | endif
 
-setlocal formatprg=~/src/scalariver/scalariver\ --url=http://localhost\:8098\ --stdin\ --stdout\ -f\ +alignSingleLineCaseStatements\ +compactControlReadability\ +doubleIndentClassDeclaration\ +rewriteArrowSymbols\ +preserveDanglingCloseParenthesis
+setlocal formatprg=~/src/scalariver/scalariver\ --url=http://localhost\:8098\ --stdin\ --stdout\ -f\ +alignSingleLineCaseStatements\ +compactControlReadability\ +doubleIndentClassDeclaration\ +preserveDanglingCloseParenthesis
 setlocal commentstring=//%s
 
 setlocal tabstop=2
