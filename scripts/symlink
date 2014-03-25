@@ -23,7 +23,7 @@ link Xresources.light ~/.Xresources.light
 link ackrc ~/.ackrc
 link git-completion.bash ~/.git-completion.bash
 link tmux.conf ~/.tmux.conf
-link Xmodmap ~/.Xmodmap
+link xmodmap/base ~/.Xmodmap
 link ctags ~/.ctags
 link vimperatorrc ~/.vimperatorrc
 link redshift.conf ~/.config/redshift.conf
