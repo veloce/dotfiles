@@ -71,7 +71,7 @@ alias gba='git branch -av'
 source ~/.git-completion.bash
 
 # Display a random adage each time bash is called
-# [ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
+[ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
