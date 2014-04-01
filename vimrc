@@ -18,8 +18,9 @@ colorscheme solarized
 " -----------
 set autoread
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
-set completeopt=menuone,preview
+set clipboard=unnamed
 set cmdheight=2                       " command bar height
+set completeopt=menuone,preview
 set cursorline
 set directory=~/.vim/tmp              " directory to put swap files
 set encoding=utf-8
@@ -38,8 +39,8 @@ set scrolloff=5                       " context around cursor
 set showcmd                           " Show partial commands in the last line of the screen
 set showmode
 set smartcase                         " case-sensitive search if expression contains a capital letter.
-set statusline=%{fugitive#statusline()}
 set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
+set statusline=%{fugitive#statusline()}
 set tags+=vendor.tags
 set wildignore=.git,*.py[co],*.class,*.obj,*.o,*.so,*.hi,tags,*/web/bundles,*/web/css,*/web/js,*/web/dashboard,**/cache*/*,**/logs/*,**/build/*,**/target*/*,**/dist/*
 set wildmenu                          " Better command-line completion
