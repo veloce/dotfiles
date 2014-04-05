@@ -85,18 +85,6 @@
 [submodule "vim/bundle/characterize"]
 	path = vim/bundle/characterize
 	url = https://github.com/tpope/vim-characterize.git
-[submodule "vim/bundle/hoogle"]
-	path = vim/bundle/hoogle
-	url = https://github.com/Twinside/vim-hoogle.git
-[submodule "vim/bundle/vim2hs"]
-	path = vim/bundle/vim2hs
-	url = https://github.com/dag/vim2hs.git
-[submodule "vim/bundle/vimproc"]
-	path = vim/bundle/vimproc
-	url = https://github.com/Shougo/vimproc.git
-[submodule "vim/bundle/ghcmod"]
-	path = vim/bundle/ghcmod
-	url = https://github.com/eagletmt/ghcmod-vim.git
 [submodule "vim/bundle/abolish"]
 	path = vim/bundle/abolish
 	url = git://github.com/tpope/vim-abolish.git
