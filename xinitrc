@@ -20,6 +20,6 @@ pulseaudio --start
 
 urxvtd -q -o -f
 
-xset r rate 200 45
+xset r rate 250 45
 
 exec xmonad
