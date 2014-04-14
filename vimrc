@@ -60,6 +60,9 @@ set smarttab
 " I have to set this here because of javascript bundle
 autocmd FileType php setlocal iskeyword-=$
 
+" automatically open quickfix window after any grep
+autocmd QuickFixCmdPost *grep* cwindow
+
 " }}}
 " MAPPINGS {{{
 " ------------
@@ -170,9 +173,8 @@ let g:CommandTMaxFiles=30000
 nnoremap <F5> :GundoToggle<CR>
 
 " Fugitive
-command! -complete=file -nargs=+ GGrep execute "silent! Ggrep" . <q-args> . " | copen | redraw!"
-nmap <leader>g :GGrep '<C-R><C-W>'<CR>
-vmap <leader>g y:GGrep '<C-R>"'<CR>
+nmap <leader>g :Ggrep '<C-R><C-W>'<CR>
+vmap <leader>g y:Ggrep '<C-R>"'<CR>
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Lusty
