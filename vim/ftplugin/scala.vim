@@ -11,5 +11,5 @@ setlocal softtabstop=2
 
 setlocal tags+=$HOME/.scala-srcs/tags
 
-" Format with scalariform and sort imports
-nmap <buffer> <leader>i mygggqG'y:SortScalaImports<CR>
+" Format with scalariform
+nmap <buffer> <leader>i mygggqG'y<CR>
