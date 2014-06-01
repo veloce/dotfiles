@@ -115,3 +115,9 @@
 [submodule "vim/bundle/snippets"]
 	path = vim/bundle/snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/bundle/rainbow-parentheses"]
+	path = vim/bundle/rainbow-parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "vim/bundle/clojure-static"]
+	path = vim/bundle/clojure-static
+	url = https://github.com/guns/vim-clojure-static.git
