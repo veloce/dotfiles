@@ -10,7 +10,7 @@ filetype indent plugin on
 syntax on
 
 set t_Co=256
-set background=dark
+set background=light
 let g:solarized_menu=0
 colorscheme solarized
 
@@ -143,6 +143,32 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 " airline
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
+
+" raindow parenthesis
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+let g:rbpt_colorpairs = [
+      \ ['brown',       'RoyalBlue3'],
+      \ ['Darkblue',    'SeaGreen3'],
+      \ ['darkgray',    'DarkOrchid3'],
+      \ ['darkgreen',   'firebrick3'],
+      \ ['darkcyan',    'RoyalBlue3'],
+      \ ['darkred',     'SeaGreen3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['brown',       'firebrick3'],
+      \ ['gray',        'RoyalBlue3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['Darkblue',    'firebrick3'],
+      \ ['darkgreen',   'RoyalBlue3'],
+      \ ['darkcyan',    'SeaGreen3'],
+      \ ['darkred',     'DarkOrchid3'],
+      \ ['red',         'firebrick3'],
+      \ ]
+
+au VimEnter *.clj,*.cljs RainbowParenthesesToggle
+au Syntax *.clj,*.cljs RainbowParenthesesLoadRound
+au Syntax *.clj,*.cljs RainbowParenthesesLoadSquare
+au Syntax *.clj,*.cljs RainbowParenthesesLoadBraces
 
 " dbext
 let g:dbext_default_history_file = '$HOME/.vim/dbext_history.txt'
