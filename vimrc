@@ -10,7 +10,7 @@ filetype indent plugin on
 syntax on
 
 set t_Co=256
-set background=light
+set background=dark
 let g:solarized_menu=0
 colorscheme solarized
 
@@ -165,7 +165,6 @@ let g:rbpt_colorpairs = [
       \ ['red',         'firebrick3'],
       \ ]
 
-au VimEnter *.clj,*.cljs RainbowParenthesesToggle
 au Syntax *.clj,*.cljs RainbowParenthesesLoadRound
 au Syntax *.clj,*.cljs RainbowParenthesesLoadSquare
 au Syntax *.clj,*.cljs RainbowParenthesesLoadBraces
