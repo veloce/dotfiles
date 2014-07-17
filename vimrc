@@ -20,6 +20,7 @@ set autoread
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
 set clipboard=unnamed
 set cmdheight=2                       " command bar height
+set colorcolumn=80
 set completeopt=menuone,preview
 set cursorline
 set directory=~/.vim/tmp              " directory to put swap files
