@@ -26,5 +26,7 @@
     subupdate = !"git submodule sync && git submodule update --init"
     subcheckout = !"git submodule foreach git checkout master"
     subreset = !"git submodule foreach --recursive git checkout -- . && git submodule foreach --recursive git clean -f"
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [merge]
     tool = vimdiff
