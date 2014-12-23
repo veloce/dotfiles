@@ -218,6 +218,10 @@ vmap <leader>a y:Ack '<C-R>"'<CR>
 " indents guides
 let g:indent_guides_guide_size = 1
 
+" js beautify
+autocmd FileType javascript noremap <buffer> <leader>f :call JsBeautify()<cr>
+autocmd FileType javascript vnoremap <buffer> <leader>f :call RangeJsBeautify()<cr>
+
 "}}}
 " CUSTOM COMMANDS {{{
 " -------------------
