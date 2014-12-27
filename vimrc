@@ -249,7 +249,7 @@ function! <SID>StripTWS()
     call cursor(l, c)
 endfunction
 command! StripTWS call <SID>StripTWS()
-autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.hs,*.java,*.scala,*.rb,*.twig,*.html,*.xml,*.css,*.vim,*.feature,*.md,*.markdown,*.clj,*.cljs :call <SID>StripTWS()
+autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.hs,*.java,*.scala,*.rb,*.twig,*.html,*.xml,*.css,*.less,*.styl,*.vim,*.feature,*.md,*.markdown,*.clj,*.cljs :call <SID>StripTWS()
 
 " Show syntax highlighting groups for word under cursor
 nnoremap <F8> :call <SID>SynStack()<CR>
