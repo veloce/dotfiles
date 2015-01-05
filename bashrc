@@ -51,7 +51,7 @@ alias p='python'
 alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
-alias chromedev='open -a Google\ Chrome\ Canary --args --disable-web-security'
+alias chromedev='open -a Google\ Chrome --new --args --disable-web-security'
 
 alias c='./app/console'
 alias ccc='./app/console ca:c'
