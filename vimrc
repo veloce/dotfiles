@@ -222,6 +222,9 @@ let g:indent_guides_guide_size = 1
 autocmd FileType javascript noremap <buffer> <leader>f :call JsBeautify()<cr>
 autocmd FileType javascript vnoremap <buffer> <leader>f :call RangeJsBeautify()<cr>
 
+" jsx
+let g:jsx_ext_required = 0
+
 "}}}
 " CUSTOM COMMANDS {{{
 " -------------------
