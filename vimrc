@@ -190,10 +190,13 @@ let g:syntastic_enable_balloons=1
 " let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active',
                             \ 'passive_filetypes': ['scala', 'java'] }
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" JSX
+let g:jsx_ext_required = 0
 
 " command-t
 let g:CommandTMaxHeight=20
