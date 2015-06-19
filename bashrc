@@ -47,8 +47,6 @@ alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
 
-alias vimjsx='vim -S ~/.dotfiles/vim/jsx.vim'
-
 alias c='./app/console'
 alias ccc='./app/console ca:c'
 
