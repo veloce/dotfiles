@@ -12,6 +12,7 @@ link (){
     ln -s $target $link
 }
 
+link xinitrc ~/.config/xfce4/xinitrc
 link bashrc ~/.bashrc
 link gitconfig ~/.gitconfig
 link vim ~/.vim
@@ -23,20 +24,11 @@ link Xresources.light ~/.Xresources.light
 link ackrc ~/.ackrc
 link git-completion.bash ~/.git-completion.bash
 link tmux.conf ~/.tmux.conf
-link xmodmap/base ~/.Xmodmap
 link ctags ~/.ctags
-link vimperatorrc ~/.vimperatorrc
 link redshift.conf ~/.config/redshift.conf
 link mplayer.conf ~/.mplayer/config
-link xmonad.hs ~/.xmonad/xmonad.hs
-link xinitrc ~/.xinitrc
-link ghci ~/.ghci
 link mpd ~/.mpd
 link tmuxinator ~/.tmuxinator
-link xmobarrc ~/.xmobarrc
-link xbindkeysrc ~/.xbindkeysrc
-link ranger/rc.conf ~/.config/ranger/rc.conf
-link ranger/colorschemes ~/.config/ranger/colorschemes
 link editorconfig ~/.editorconfig
 
 # scripts

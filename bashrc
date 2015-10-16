@@ -1,5 +1,5 @@
 export EDITOR=vim
-export BROWSER=firefox
+export BROWSER=chromium-browser
 
 # history
 export HISTCONTROL=erasedups
@@ -7,9 +7,6 @@ export HISTSIZE=100000
 shopt -s histappend
 
 shopt -s checkwinsize
-
-[ -d $HOME/src/play ] && export PATH=$PATH:$HOME/src/play
-[ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
@@ -62,9 +59,6 @@ alias gc='git commit -v'
 alias gco='git checkout'
 alias gba='git branch -av'
 
-# Git completion
-source ~/.git-completion.bash
-
 # Display a random adage each time bash is called
 [ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
 
@@ -104,11 +98,3 @@ function man()
     vim -u "~/.vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
 
-# java version
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
-
-alias java7='export JAVA_HOME=$JAVA_7_HOME'
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
-
-export JAVA_HOME=$JAVA_8_HOME
