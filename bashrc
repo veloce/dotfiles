@@ -10,6 +10,8 @@ shopt -s checkwinsize
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
+export PATH=$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
