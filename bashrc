@@ -10,9 +10,6 @@ shopt -s checkwinsize
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-# disable xrvt freeze with ctrl-s and ctrl-q
-stty -ixon -ixoff
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -23,7 +20,7 @@ parse_git_branch() {
 PS1="\[\033[1;34m\]@\h \w\$(parse_git_branch) $\[\033[0m\] "
 
 # enable color support of ls and also add handy aliases
-eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
+# eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
