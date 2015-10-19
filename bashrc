@@ -47,9 +47,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
-
-alias c='./app/console'
-alias ccc='./app/console ca:c'
+alias chromedev='chromium-browser --user-data-dir="/tmp/chrome-dev-session" --disable-web-security'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
 alias sqltags='ctags --languages=+SQL'
