@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#xrdb $HOME/.Xresources
+xrdb $HOME/.dotfiles/Xresources
 redshift-gtk &
 
 urxvtd -q -o -f
