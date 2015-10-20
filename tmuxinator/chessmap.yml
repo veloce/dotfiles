@@ -1,9 +1,0 @@
-project_name: chessmap
-project_root: ~/dev/chessmap
-tabs:
-  - main:
-      layout: even-horizontal
-      panes:
-        - cd ~/dev/chessmap && vim
-        - cd ~/dev/chessmap && sbt play
-  - shell: cd ~/dev/chessmap
