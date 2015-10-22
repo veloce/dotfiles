@@ -37,11 +37,7 @@ URxvt.intensityStyles: true
 URxvt.urgentOnBell:    true
 URxvt.cursorBlink:     false
 
-! Yankable urls
-URxvt.perl-ext:      default,url-select
-URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.url-select.launcher:   firefox
-URxvt.url-select.underline: true
+URxvt.clipboard.autocopy: true
 ! }}}
 ! -- dzen2 {{{
 dzen2.font:        xft:Inconsolata:size=24
