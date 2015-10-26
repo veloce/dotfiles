@@ -139,3 +139,6 @@
 [submodule "vim/bundle/css"]
 	path = vim/bundle/css
 	url = https://github.com/JulesWang/css.vim.git
+[submodule "vim/bundle/closetag"]
+	path = vim/bundle/closetag
+	url = git@github.com:alvan/vim-closetag.git

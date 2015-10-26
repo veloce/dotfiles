@@ -145,6 +145,9 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 
+" closetag
+let g:closetag_filenames = "*.html,*.xml"
+
 " raindow parenthesis
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
