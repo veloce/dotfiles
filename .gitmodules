@@ -139,3 +139,6 @@
 [submodule "vim/bundle/closetag"]
 	path = vim/bundle/closetag
 	url = git@github.com:alvan/vim-closetag.git
+[submodule "vim/bundle/jsx"]
+	path = vim/bundle/jsx
+	url = https://github.com/veloce/vim-jsx.git
