@@ -18,7 +18,7 @@ Xft.hinting:       true
 Xft.rgba:          rgb
 ! }}}
 ! Urxvt {{{
-URxvt.font:        xft:Inconsolata:size=14
+URxvt.font:        xft:Inconsolata:size=14,xft:Monospace:size=14
 URxvt.letterSpace: -1
 
 URxvt.scrollBar:   false
