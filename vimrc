@@ -285,6 +285,17 @@ function! s:CleanCode()
 endfunction
 com! CleanCode call s:CleanCode()
 
+" Project settings
+function! s:SetupEnvironment()
+  let l:path = expand('%:p')
+  if l:path =~ '/home/vve/dev/foyer-sammy'
+    setlocal tabstop=4
+    setlocal shiftwidth=4
+    setlocal softtabstop=4
+  endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call s:SetupEnvironment()
+
 " }}}
 
 " vim:fdm=marker
