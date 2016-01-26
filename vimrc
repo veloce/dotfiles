@@ -217,7 +217,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 let g:LustyJugglerShowKeys = 0
 
 " Ack
-let g:ackprg="ack -a -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
+let g:ackprg="ack -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
 nmap <leader>a :Ack '<C-R><C-W>'<CR>
 vmap <leader>a y:Ack '<C-R>"'<CR>
 
