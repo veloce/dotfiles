@@ -30,3 +30,7 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [merge]
     tool = vimdiff
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

@@ -18,7 +18,8 @@ Xft.hinting:       true
 Xft.rgba:          rgb
 ! }}}
 ! Urxvt {{{
-URxvt.font:        xft:Inconsolata:size=14
+URxvt.font:        xft:Inconsolata:size=14,xft:Monospace:size=14
+URxvt.letterSpace: -1
 
 URxvt.scrollBar:   false
 URxvt.jumpScroll:  true
@@ -36,11 +37,7 @@ URxvt.intensityStyles: true
 URxvt.urgentOnBell:    true
 URxvt.cursorBlink:     false
 
-! Yankable urls
-URxvt.perl-ext:      default,url-select
-URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.url-select.launcher:   firefox
-URxvt.url-select.underline: true
+URxvt.clipboard.autocopy: true
 ! }}}
 ! -- dzen2 {{{
 dzen2.font:        xft:Inconsolata:size=24

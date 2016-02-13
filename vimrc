@@ -43,7 +43,7 @@ set smartcase                         " case-sensitive search if expression cont
 set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
 set statusline=%{fugitive#statusline()}
 set tags+=vendor.tags
-set wildignore=.git,*.py[co],*.class,*.obj,*.o,*.so,*.hi,tags,**/cache*/*,**/logs/*,**/target*/*,**/dist/*,**/node_modules/*,**/public/*,**/www/*,**/build/*
+set wildignore=.git,*.py[co],*.class,*.obj,*.o,*.so,*.hi,tags,**/cache*/*,**/logs/*,**/target*/*,**/dist/*,**/node_modules/*,**/build/*,**/i18n/*,**/locale/*,**/compiled/*
 set wildmenu                          " Better command-line completion
 set wildmode=list:longest
 
@@ -52,10 +52,10 @@ set listchars=tab:▸\ ,eol:$
 set autoindent
 set expandtab
 set smartindent
-set tabstop=4
 set shiftround
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set smarttab
 
 " I have to set this here because of javascript bundle
@@ -145,6 +145,9 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 
+" closetag
+let g:closetag_filenames = "*.html,*.xml"
+
 " raindow parenthesis
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
@@ -214,7 +217,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 let g:LustyJugglerShowKeys = 0
 
 " Ack
-let g:ackprg="ack -a -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
+let g:ackprg="ack -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs --ignore-dir=build"
 nmap <leader>a :Ack '<C-R><C-W>'<CR>
 vmap <leader>a y:Ack '<C-R>"'<CR>
 
@@ -252,7 +255,7 @@ function! <SID>StripTWS()
     call cursor(l, c)
 endfunction
 command! StripTWS call <SID>StripTWS()
-autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.hs,*.java,*.scala,*.rb,*.twig,*.html,*.xml,*.css,*.less,*.styl,*.vim,*.feature,*.md,*.markdown,*.clj,*.cljs :call <SID>StripTWS()
+autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.hs,*.java,*.scala,*.rb,*.twig,*.html,*.xml,*.css,*.less,*.styl,*.vim,*.feature,*.md,*.markdown,*.clj,*.cljs,*.jade :call <SID>StripTWS()
 
 " Show syntax highlighting groups for word under cursor
 nnoremap <F8> :call <SID>SynStack()<CR>
@@ -281,6 +284,17 @@ function! s:CleanCode()
   echo "Cleaned up this mess."
 endfunction
 com! CleanCode call s:CleanCode()
+
+" Project settings
+function! s:SetupEnvironment()
+  let l:path = expand('%:p')
+  if l:path =~ '/home/vve/dev/foyer-sammy'
+    setlocal tabstop=4
+    setlocal shiftwidth=4
+    setlocal softtabstop=4
+  endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call s:SetupEnvironment()
 
 " }}}
 

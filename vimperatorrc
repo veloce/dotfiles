@@ -1,6 +1,0 @@
-set gui=navigation,tabs
-set defsearch=duckduckgo
-
-hi Normal color: black; background: white; font-size: 13pt;
-
-" vim: set ft=vimperator:

@@ -1,5 +1,5 @@
 export EDITOR=vim
-export BROWSER=firefox
+export BROWSER=chromium-browser
 
 # history
 export HISTCONTROL=erasedups
@@ -8,15 +8,20 @@ shopt -s histappend
 
 shopt -s checkwinsize
 
-[ -d $HOME/src/play ] && export PATH=$PATH:$HOME/src/play
-[ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
+stty -ixon
 
 export PATH=$PATH:$HOME/android-sdk/sdk/platform-tools/:$HOME/android-sdk/sdk/tools/
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-# disable xrvt freeze with ctrl-s and ctrl-q
-stty -ixon -ixoff
+export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools
+
+export NVM_DIR="/home/vve/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm use 5.3.0
+
+export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -26,6 +31,17 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 PS1="\[\033[1;34m\]@\h \w\$(parse_git_branch) $\[\033[0m\] "
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 # enable color support of ls and also add handy aliases
 eval $(gdircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
@@ -48,13 +64,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
-alias vim='mvim -v'
-alias vimdiff='mvimdiff -v'
+#alias vim='mvim -v'
+#alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/Users/zengularity/.chrome_dev_user_data_dir'
-
-alias c='./app/console'
-alias ccc='./app/console ca:c'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
 alias sqltags='ctags --languages=+SQL'
@@ -67,9 +80,6 @@ alias gd='git diff'
 alias gc='git commit -v'
 alias gco='git checkout'
 alias gba='git branch -av'
-
-# Git completion
-source ~/.git-completion.bash
 
 # Display a random adage each time bash is called
 [ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
@@ -110,11 +120,3 @@ function vman()
     vim -u "~/.vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
 
-# java version
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
-
-alias java7='export JAVA_HOME=$JAVA_7_HOME'
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
-
-export JAVA_HOME=$JAVA_8_HOME
