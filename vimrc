@@ -188,12 +188,14 @@ let g:pydoc_highlight = 0
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat']
 
 " syntastic options
+let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=1
 " let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active',
                             \ 'passive_filetypes': ['scala', 'java'] }
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_ignore_files = ['*.html']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
