@@ -16,10 +16,10 @@ export PATH=$PATH:$HOME/android-sdk/sdk/platform-tools/:$HOME/android-sdk/sdk/to
 
 export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools
 
-export NVM_DIR="/home/vve/.nvm"
+export NVM_DIR="/Users/vve/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm use 5.3.0
+nvm use 5.5.0
 
 export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
@@ -45,7 +45,7 @@ fi
 
 # enable color support of ls and also add handy aliases
 eval $(gdircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
-alias ls='gls --color=auto'
+alias ls='ls -G'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 
@@ -64,10 +64,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
-#alias vim='mvim -v'
-#alias vimdiff='mvimdiff -v'
+alias vim='mvim'
+alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
-alias chromedev='open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/Users/zengularity/.chrome_dev_user_data_dir'
+alias chromedev='open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/Users/vve/.chrome_dev_user_data_dir'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
 alias sqltags='ctags --languages=+SQL'
@@ -80,9 +80,6 @@ alias gd='git diff'
 alias gc='git commit -v'
 alias gco='git checkout'
 alias gba='git branch -av'
-
-# Display a random adage each time bash is called
-[ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
