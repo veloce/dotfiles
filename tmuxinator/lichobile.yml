@@ -32,5 +32,5 @@ windows:
       layout: main-vertical
       panes:
         - vim
-        - cd project/www && http-server .
+        - cd project && http-server .
         - cd project && gulp watch
