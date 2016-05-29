@@ -145,3 +145,6 @@
 [submodule "vim/bundle/css3"]
 	path = vim/bundle/css3
 	url = git@github.com:hail2u/vim-css3-syntax.git
+[submodule "vim/bundle/yats"]
+	path = vim/bundle/yats
+	url = https://github.com/HerringtonDarkholme/yats.vim.git
