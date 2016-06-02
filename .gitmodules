@@ -145,6 +145,9 @@
 [submodule "vim/bundle/css3"]
 	path = vim/bundle/css3
 	url = git@github.com:hail2u/vim-css3-syntax.git
-[submodule "vim/bundle/yats"]
-	path = vim/bundle/yats
-	url = https://github.com/HerringtonDarkholme/yats.vim.git
+[submodule "vim/bundle/typescript"]
+	path = vim/bundle/typescript
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/bundle/js-indent"]
+	path = vim/bundle/js-indent
+	url = https://github.com/jason0x43/vim-js-indent.git
