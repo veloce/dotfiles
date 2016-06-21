@@ -135,16 +135,16 @@
 	url = https://github.com/othree/html5.vim.git
 [submodule "vim/bundle/closetag"]
 	path = vim/bundle/closetag
-	url = git@github.com:alvan/vim-closetag.git
+	url = https://github.com/alvan/vim-closetag.git
 [submodule "vim/bundle/jsx"]
 	path = vim/bundle/jsx
 	url = https://github.com/veloce/vim-jsx.git
 [submodule "vim/bundle/jade"]
 	path = vim/bundle/jade
-	url = git@github.com:digitaltoad/vim-jade.git
+	url = https://github.com/digitaltoad/vim-jade.git
 [submodule "vim/bundle/css3"]
 	path = vim/bundle/css3
-	url = git@github.com:hail2u/vim-css3-syntax.git
+	url = https://github.com/hail2u/vim-css3-syntax.git
 [submodule "vim/bundle/typescript"]
 	path = vim/bundle/typescript
 	url = https://github.com/leafgarland/typescript-vim.git
