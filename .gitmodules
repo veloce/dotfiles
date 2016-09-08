@@ -151,6 +151,3 @@
 [submodule "vim/bundle/js-indent"]
 	path = vim/bundle/js-indent
 	url = https://github.com/jason0x43/vim-js-indent.git
-[submodule "vim/bundle/typescript-tsx"]
-	path = vim/bundle/typescript-tsx
-	url = https://github.com/ianks/vim-tsx.git
