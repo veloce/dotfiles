@@ -194,6 +194,7 @@ let g:syntastic_enable_balloons=1
 let g:syntastic_mode_map = { 'mode': 'active',
                             \ 'passive_filetypes': ['scala', 'java'] }
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_ignore_files = ['*.html']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -256,7 +257,7 @@ function! <SID>StripTWS()
     call cursor(l, c)
 endfunction
 command! StripTWS call <SID>StripTWS()
-autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.hs,*.java,*.scala,*.rb,*.twig,*.html,*.xml,*.css,*.less,*.styl,*.vim,*.feature,*.md,*.markdown,*.clj,*.cljs,*.jade :call <SID>StripTWS()
+autocmd BufWritePre *.php,*.c,*.cpp,*.py,*.js,*.ts,*.tsx,*.hs,*.java,*.scala,*.rb,*.twig,*.html,*.xml,*.css,*.less,*.styl,*.vim,*.feature,*.md,*.markdown,*.clj,*.cljs,*.jade :call <SID>StripTWS()
 
 " Show syntax highlighting groups for word under cursor
 nnoremap <F8> :call <SID>SynStack()<CR>
