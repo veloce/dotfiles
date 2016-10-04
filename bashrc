@@ -14,6 +14,8 @@ stty -ixon
 
 export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/android-ndk
 
+export ANDROID_HOME=$HOME/android-sdk
+
 export NVM_DIR="/Users/vve/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -61,8 +63,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
-alias vim='mvim -v'
-alias gvim='mvim'
+alias vim='vim -u /usr/share/vim/vimrc'
+alias gvim='mvim -g'
+alias mvim='mvim -v'
 alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/Users/vve/.chrome_dev_user_data_dir'
