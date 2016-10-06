@@ -12,7 +12,7 @@ stty -ixon
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/android-ndk
+export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/android-ndk:$HOME/activator/bin
 
 export ANDROID_HOME=$HOME/android-sdk
 
@@ -32,15 +32,8 @@ parse_git_branch() {
 }
 PS1="\[\033[1;34m\]@\h \w\$(parse_git_branch) $\[\033[0m\] "
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 # enable color support of ls and also add handy aliases
@@ -63,9 +56,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
-alias vim='vim -u /usr/share/vim/vimrc'
+alias nvim='vim -u ~/.dotfiles/vimrc_root'
 alias gvim='mvim -g'
-alias mvim='mvim -v'
+alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/Users/vve/.chrome_dev_user_data_dir'
