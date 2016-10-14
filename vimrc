@@ -230,6 +230,9 @@ let g:indent_guides_guide_size = 1
 autocmd FileType javascript noremap <buffer> <leader>f :call JsBeautify()<cr>
 autocmd FileType javascript vnoremap <buffer> <leader>f :call RangeJsBeautify()<cr>
 
+" typescript tools
+autocmd FileType typescript nmap <buffer> <Leader>s : <C-u>echo tsuquyomi#hint()<CR>
+
 "}}}
 " CUSTOM COMMANDS {{{
 " -------------------
