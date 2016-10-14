@@ -231,6 +231,7 @@ autocmd FileType javascript noremap <buffer> <leader>f :call JsBeautify()<cr>
 autocmd FileType javascript vnoremap <buffer> <leader>f :call RangeJsBeautify()<cr>
 
 " typescript tools
+let g:tsuquyomi_disable_default_mappings = 1
 autocmd FileType typescript nmap <buffer> <Leader>s : <C-u>echo tsuquyomi#hint()<CR>
 
 "}}}
