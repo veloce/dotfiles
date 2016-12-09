@@ -1,5 +1,5 @@
 export EDITOR=vim
-export BROWSER=chromium-browser
+export BROWSER="/Users/vve/.dotfiles/scripts/vim-browser %s"
 
 # history
 export HISTCONTROL=erasedups
