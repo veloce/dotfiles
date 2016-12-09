@@ -12,7 +12,7 @@ stty -ixon
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/android-ndk:$HOME/activator/bin
+export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/android-ndk:$HOME/activator/bin:`yarn global bin`
 
 export ANDROID_HOME=$HOME/android-sdk
 
@@ -61,7 +61,7 @@ alias gvim='mvim -g'
 alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
-alias chromedev='open -n -a Google\ Chrome --args --disable-web-security --user-data-dir=/Users/vve/.chrome_dev_user_data_dir'
+alias chromedev='/Applications/Chromium.app/Contents/MacOS/Chromium --disable-web-security --user-data-dir=/Users/vve/.chrome_dev'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
 alias sqltags='ctags --languages=+SQL'
