@@ -62,6 +62,7 @@ alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='/Applications/Chromium.app/Contents/MacOS/Chromium --disable-web-security --user-data-dir=/Users/vve/.chrome_dev'
+alias sorteddu='du -sch .[!.]* * |sort -h'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
 alias sqltags='ctags --languages=+SQL'
