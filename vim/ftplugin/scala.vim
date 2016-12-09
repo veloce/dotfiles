@@ -9,7 +9,7 @@ setlocal tags+=$HOME/.scala-srcs/tags
 
 " Format with scalariform
 nmap <buffer> <leader>i mygggqG'y<CR>
-noremap <leader>s :EnInspectType<CR>
+noremap <leader>s :EnType<CR>
 noremap <leader>d :EnDeclaration<CR>
 
 " macro to convert case class to anorm row parser
