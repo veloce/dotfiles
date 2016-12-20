@@ -19,7 +19,7 @@ export ANDROID_HOME=$HOME/android-sdk
 export NVM_DIR="/Users/vve/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm use 6.7.0
+nvm use 6.9.2
 
 export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
