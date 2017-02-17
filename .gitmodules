@@ -1,21 +1,18 @@
-[submodule "vim/bundle/matchit"]
-	path = vim/bundle/matchit
-	url = http://github.com/edsono/vim-matchit.git
 [submodule "vim/bundle/lusty"]
 	path = vim/bundle/lusty
-	url = http://github.com/sjbach/lusty.git
+	url = https://github.com/sjbach/lusty.git
 [submodule "vim/bundle/surround"]
 	path = vim/bundle/surround
-	url = http://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/unimpaired"]
 	path = vim/bundle/unimpaired
-	url = http://github.com/tpope/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
-	url = http://github.com/mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "vim/bundle/phpfolding"]
 	path = vim/bundle/phpfolding
-	url = http://github.com/vim-scripts/phpfolding.vim.git
+	url = https://github.com/vim-scripts/phpfolding.vim.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
