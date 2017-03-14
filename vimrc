@@ -232,8 +232,10 @@ autocmd FileType javascript vnoremap <buffer> <leader>f :call RangeJsBeautify()<
 
 " typescript tools
 let g:tsuquyomi_disable_default_mappings = 1
+let g:tsuquyomi_completion_detail = 1
 autocmd FileType typescript nmap <buffer> <Leader>s : <C-u>echo tsuquyomi#hint()<CR>
 autocmd FileType typescript nmap <buffer> <C-]> :TsuDefinition<CR>
+autocmd FileType typescript setlocal completeopt+=menu,preview
 
 "}}}
 " CUSTOM COMMANDS {{{
