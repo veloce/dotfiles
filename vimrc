@@ -297,7 +297,7 @@ com! CleanCode call s:CleanCode()
 " Project settings
 function! s:SetupEnvironment()
   let l:path = expand('%:p')
-  if l:path =~ '/home/vve/dev/foyer-sammy'
+  if l:path =~ '/Volumes/data/dev/foyer-sammy-front'
     setlocal tabstop=4
     setlocal shiftwidth=4
     setlocal softtabstop=4

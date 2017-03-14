@@ -4,7 +4,7 @@ syntax on
 
 set background=dark
 set t_Co=256
-colorscheme desert256
+colorscheme desert
 
 set encoding=utf-8
 

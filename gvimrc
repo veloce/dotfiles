@@ -10,7 +10,7 @@ set guioptions+=c
 
 colorscheme solarized
 if &l:diff
-  set guifont=Inconsolata\ 10
+  set guifont=Monaco:h10
 else
-  set guifont=Inconsolata\ 14
+  set guifont=Monaco:h14
 endif
