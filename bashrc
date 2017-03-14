@@ -14,10 +14,12 @@ stty -ixon
 
 export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/android-ndk/
 
+export ANDROID_HOME=$HOME/android-sdk
+
 export NVM_DIR="/home/vve/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm use 5.3.0
+hash nvm 2>/dev/null && nvm use 6.9.0
 
 export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
@@ -42,7 +44,7 @@ if ! shopt -oq posix; then
 fi
 
 # enable color support of ls and also add handy aliases
-eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
+hash dircolors 2>/dev/null && eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -78,7 +80,7 @@ alias gco='git checkout'
 alias gba='git branch -av'
 
 # Display a random adage each time bash is called
-[ -x `which fortune` ] && [ -x `which cowsay` ] && fortune | cowsay
+hash fortune 2>/dev/null && hash cowsay 2>/dev/null && fortune | cowsay
 
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
@@ -111,8 +113,11 @@ function extract()
 }
 
 # Open man pages in vim
-function man()
+function vman()
 {
     vim -u "~/.vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
 
+if [ "$(uname)" == "Darwin" ]; then
+  source ~/.dotfiles/osxbashrc
+fi
