@@ -64,6 +64,9 @@ autocmd FileType php setlocal iskeyword-=$
 " automatically open quickfix window after any grep
 autocmd QuickFixCmdPost *grep* cwindow
 
+" conf ext not properly detected
+au BufNewFile,BufRead *.conf set filetype=conf
+
 " }}}
 " MAPPINGS {{{
 " ------------
