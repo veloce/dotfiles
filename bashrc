@@ -16,10 +16,10 @@ export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-t
 
 export ANDROID_HOME=$HOME/android-sdk
 
-export NVM_DIR="/home/vve/.nvm"
+export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-hash nvm 2>/dev/null && nvm use 6.9.0
+hash nvm 2>/dev/null && nvm use 6.10.3
 
 export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
@@ -64,7 +64,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
-alias chromedev='chromium-browser --user-data-dir="/home/vve/chrome-dev-session" --disable-web-security'
+alias chromedev='chromium-browser --user-data-dir="$HOME/chrome-dev-session" --disable-web-security'
 alias sorteddu='du -sch .[!.]* * |sort -h'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
@@ -121,3 +121,4 @@ function vman()
 if [ "$(uname)" == "Darwin" ]; then
   source ~/.dotfiles/osxbashrc
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

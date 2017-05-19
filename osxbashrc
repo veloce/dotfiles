@@ -1,4 +1,4 @@
-export BROWSER="/Users/vve/.dotfiles/scripts/vim-browser %s"
+export BROWSER="$HOME/.dotfiles/scripts/vim-browser %s"
 
 alias ls='ls -G'
 alias nvim='vim -u ~/.dotfiles/vimrc_root'
@@ -8,7 +8,7 @@ alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='/Applications/Chromium.app/Contents/MacOS/Chromium --disable-web-security --user-data-dir=/Users/vve/.chrome_dev'
 
-export NVM_DIR="/Users/vve/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 nvm use 6.9.2
