@@ -1,7 +1,6 @@
 export BROWSER="$HOME/.dotfiles/scripts/vim-browser %s"
 
 alias ls='ls -G'
-alias nvim='vim -u ~/.dotfiles/vimrc_root'
 alias gvim='mvim -g'
 alias vim='mvim -v'
 alias vimdiff='mvimdiff -v'
