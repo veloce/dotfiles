@@ -7,11 +7,6 @@ alias vimdiff='mvimdiff -v'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='/Applications/Chromium.app/Contents/MacOS/Chromium --disable-web-security --user-data-dir=/Users/vve/.chrome_dev'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-nvm use 6.9.2
-
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
