@@ -12,9 +12,7 @@ stty -ixon
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-export PATH=$HOME/bin:$PATH:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/android-ndk/
-
-export ANDROID_HOME=$HOME/android-sdk
+export PATH=$HOME/bin:$PATH:$HOME/android-ndk/
 
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
