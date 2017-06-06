@@ -75,6 +75,15 @@ alias gba='git branch -av'
 # Display a random adage each time bash is called
 hash fortune 2>/dev/null && hash cowsay 2>/dev/null && fortune | cowsay
 
+# Custom docker ps
+docker() {
+    if [[ $@ == "psf" ]]; then
+        command docker ps --format "table {{.Names}}\t{{.Ports}}\t{{.Status}}"
+    else
+        command docker "$@"
+    fi
+}
+
 # Find a file with a pattern in name:
 function ff() { find . -type f -iname '*'$*'*' -ls ; }
 
