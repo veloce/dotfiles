@@ -10,9 +10,9 @@ filetype indent plugin on
 syntax on
 
 set t_Co=256
-set background=dark
 let g:solarized_menu=0
 colorscheme solarized
+set background=dark
 
 " OPTIONS {{{
 " -----------
