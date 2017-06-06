@@ -57,7 +57,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias clisp='clisp -q -modern'
 alias p='python'
-alias chromedev='chromium-browser --user-data-dir="$HOME/chrome-dev-session" --disable-web-security'
+alias chromedev='chromium --user-data-dir="$HOME/.chrome-dev" --disable-web-security'
 alias sorteddu='du -sch .[!.]* * |sort -h'
 
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
