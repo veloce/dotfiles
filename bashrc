@@ -14,11 +14,6 @@ stty -ixon
 
 export PATH=$HOME/bin:$PATH:$HOME/android-ndk/
 
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-hash nvm 2>/dev/null && nvm use 6.10.3
-
 export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
 # make less more friendly for non-text input files, see lesspipe(1)
