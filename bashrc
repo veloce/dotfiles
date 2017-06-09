@@ -75,7 +75,7 @@ hash fortune 2>/dev/null && hash cowsay 2>/dev/null && fortune | cowsay
 
 # Custom docker ps
 docker() {
-    if [[ $@ == "psf" ]]; then
+    if [[ $@ == "ps" ]]; then
         command docker ps --format "table {{.Names}}\t{{.Ports}}\t{{.Status}}"
     else
         command docker "$@"
