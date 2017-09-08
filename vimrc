@@ -209,6 +209,8 @@ let g:jsx_ext_required = 0
 " command-t
 let g:CommandTMaxHeight=20
 let g:CommandTMaxFiles=30000
+" grrr fix for command-t
+let g:CommandTWildIgnore=&wildignore . ",*/node_modules,*/build,*/cache"
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
