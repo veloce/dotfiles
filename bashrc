@@ -14,6 +14,8 @@ stty -ixon
 
 export PATH=$HOME/bin:$PATH:$HOME/android-ndk/
 
+export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
