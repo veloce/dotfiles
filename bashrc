@@ -12,7 +12,7 @@ stty -ixon
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-export PATH=$HOME/bin:$PATH:$HOME/android-ndk/
+export PATH=$HOME/bin:$HOME/android-ndk/:$HOME/.local/bin:$PATH
 
 export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
 
