@@ -10,9 +10,6 @@
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/phpfolding"]
-	path = vim/bundle/phpfolding
-	url = https://github.com/vim-scripts/phpfolding.vim.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -46,9 +43,6 @@
 [submodule "vim/bundle/commentary"]
 	path = vim/bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
-[submodule "vim/bundle/php-namespace"]
-	path = vim/bundle/php-namespace
-	url = git://github.com/arnaud-lb/vim-php-namespace.git
 [submodule "vim/bundle/camelCaseMotion"]
 	path = vim/bundle/camelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
@@ -58,9 +52,6 @@
 [submodule "vim/bundle/scala"]
 	path = vim/bundle/scala
 	url = https://github.com/veloce/vim-scala.git
-[submodule "vim/bundle/behat"]
-	path = vim/bundle/behat
-	url = https://github.com/veloce/vim-behat.git
 [submodule "vim/bundle/pasta"]
 	path = vim/bundle/pasta
 	url = https://github.com/sickill/vim-pasta.git
