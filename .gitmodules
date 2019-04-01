@@ -148,3 +148,6 @@
 [submodule "vim/bundle/cql"]
 	path = vim/bundle/cql
 	url = https://github.com/elubow/cql-vim.git
+[submodule "vim/bundle/rhubarb"]
+	path = vim/bundle/rhubarb
+	url = https://github.com/tpope/vim-rhubarb.git
