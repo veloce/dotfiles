@@ -151,3 +151,6 @@
 [submodule "vim/bundle/rhubarb"]
 	path = vim/bundle/rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "vim/bundle/kotlin"]
+	path = vim/bundle/kotlin
+	url = https://github.com/udalov/kotlin-vim.git
