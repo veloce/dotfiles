@@ -154,3 +154,6 @@
 [submodule "vim/bundle/kotlin"]
 	path = vim/bundle/kotlin
 	url = https://github.com/udalov/kotlin-vim.git
+[submodule "vim/bundle/swift"]
+	path = vim/bundle/swift
+	url = https://github.com/keith/swift.vim.git
