@@ -1,18 +1,23 @@
 export BROWSER="$HOME/.dotfiles/scripts/vim-browser %s"
 
 alias ls='ls -G'
-alias gvim='mvim -g'
-alias vim='mvim -v'
-alias vimdiff='mvimdiff -v'
+alias vim='nvim'
 alias tmux="TERM=screen-256color-bce tmux"
-alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=$HOME/.chrome_dev'
+alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=$HOME/.chrome_dev'
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# Set java version
+# https://www.kevinhooke.com/2017/10/05/switching-java-versions-on-mac-os/
+# alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`"
+alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`"
+j8
 
 # vim: ft=sh
