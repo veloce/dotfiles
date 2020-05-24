@@ -72,9 +72,6 @@ alias gc='git commit -v'
 alias gco='git checkout'
 alias gba='git branch -av'
 
-# Display a random adage each time bash is called
-hash fortune 2>/dev/null && hash cowsay 2>/dev/null && fortune | cowsay
-
 # Custom docker ps
 docker() {
     if [[ $@ == "ps" ]]; then
@@ -125,5 +122,12 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Display a random adage each time bash is called
+# hash fortune 2>/dev/null && hash cowsay 2>/dev/null && fortune | cowsay
+if hash cowsay 2>/dev/null; then
+  if ((RANDOM % 5 == 0)); then
+    python3 ~/.dotfiles/sgen/porn.py | cowsay
+  else
+    ~/.dotfiles/sgen/sgen.js | cowsay
+  fi
+fi
