@@ -2,6 +2,7 @@ export BROWSER="$HOME/.dotfiles/scripts/vim-browser %s"
 
 alias ls='ls -G'
 alias vim='nvim'
+alias tvim='nvim -c "colorscheme desert"'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=$HOME/.chrome_dev'
 
