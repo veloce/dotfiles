@@ -230,7 +230,7 @@ let g:syntastic_enable_balloons=1
 let g:syntastic_mode_map = { 'mode': 'active',
                             \ 'passive_filetypes': ['scala', 'java'] }
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_typescript_checkers = ['eslint']
 let g:syntastic_ignore_files = ['*.html']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
