@@ -13,22 +13,20 @@ link (){
 }
 
 link xinitrc ~/.config/xfce4/xinitrc
-link bashrc ~/.bashrc
+link zshrc ~/.zshrc
+link zshenv ~/.zshenv
 link gitconfig ~/.gitconfig
-link vim ~/.vim
-link vimrc ~/.vimrc
+link nvim ~/.config/nvim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 link vimrc_git ~/.vimrc_git
-link gvimrc ~/.gvimrc
 link Xresources ~/.Xresources
 link Xresources.light ~/.Xresources.light
 link ackrc ~/.ackrc
-link git-completion.bash ~/.git-completion.bash
 link tmux.conf ~/.tmux.conf
 link ctags ~/.ctags
 link redshift.conf ~/.config/redshift.conf
 link mplayer.conf ~/.mplayer/config
 link mpd ~/.mpd
-link tmuxinator ~/.tmuxinator
 link editorconfig ~/.editorconfig
 
 # scripts

@@ -1,17 +1,25 @@
 " Vincent Velociter - vimrc
+call plug#begin(stdpath('data') . '/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'rakr/vim-one'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'wincent/command-t', {
+    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+    \ }
+call plug#end()
 
-set nocompatible                      " this should be the first
+let g:loaded_python_provider=0
+let g:python3_host_prog="/usr/local/bin/python3"
 
-call pathogen#infect()
-
-let g:feature_filetype='behat'
-
-filetype indent plugin on
-syntax on
-
-set t_Co=256
-let g:solarized_menu=0
-colorscheme solarized
+set termguicolors
+let g:one_allow_italics = 1
+colorscheme one
 set background=dark
 
 " OPTIONS {{{
@@ -70,6 +78,8 @@ au BufNewFile,BufRead *.conf set filetype=conf
 " }}}
 " MAPPINGS {{{
 " ------------
+
+
 " easy switch for indent spaces
 nmap <leader>2 :setlocal tabstop=2<cr>:setlocal shiftwidth=2<cr>:setlocal softtabstop=2<cr>
 nmap <leader>4 :setlocal tabstop=4<cr>:setlocal shiftwidth=4<cr>:setlocal softtabstop=4<cr>
@@ -100,8 +110,8 @@ vmap <C-a> :Tab /^[^:]*:\zs
 cmap <C-a> Tab /^[^:]*:\zs
 
 " in current directory operations
+nmap <leader>lr :e <C-R>=expand("%:h")<CR><C-D>
 nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-nmap <leader>rd :r <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>mk :!mkdir <C-R>=expand("%:p:h") . "/" <CR>
@@ -145,7 +155,7 @@ nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 " -------------------
 
 " airline
-let g:airline_theme='solarized'
+let g:airline_theme='one'
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = '▶'
@@ -233,7 +243,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['eslint']
 let g:syntastic_ignore_files = ['*.html']
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " JSX

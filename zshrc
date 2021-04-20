@@ -2,35 +2,20 @@ export EDITOR=vim
 export BROWSER=chromium-browser
 
 # history
-export HISTCONTROL=erasedups
-export HISTSIZE=100000
-shopt -s histappend
+HISTSIZE=90000
+SAVEHIST=90000
+setopt SHARE_HISTORY
 
-shopt -s checkwinsize
+# autocompletion
+autoload -Uz compinit
+compinit
 
-stty -ixon
-
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# prompt that display current git branch
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-PS1="\[\033[1;34m\]@\h \w\$(parse_git_branch) $\[\033[0m\] "
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+# Set up the prompt (with git branch name)
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats 'on %b'
+setopt PROMPT_SUBST
+PROMPT='%m ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 
 # enable color support of ls and also add handy aliases
 hash dircolors 2>/dev/null && eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
@@ -113,7 +98,7 @@ function vman()
     vim -u "~/.vimrc_git" -XMnR "+runtime! ftplugin/man.vim" "+Man $1" "+set nomodifiable" "+only"
 }
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
   source ~/.dotfiles/osxbashrc
 fi
 
@@ -126,25 +111,3 @@ if hash cowsay 2>/dev/null; then
     ~/.dotfiles/sgen/sgen.js | cowsay
   fi
 fi
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/veloce/dev/webhooks-lambda/node_modules/tabtab/.completions/serverless.bash ] && . /Users/veloce/dev/webhooks-lambda/node_modules/tabtab/.completions/serverless.bash
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/veloce/dev/webhooks-lambda/node_modules/tabtab/.completions/sls.bash ] && . /Users/veloce/dev/webhooks-lambda/node_modules/tabtab/.completions/sls.bash
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/veloce/dev/webhooks-lambda/node_modules/tabtab/.completions/slss.bash ] && . /Users/veloce/dev/webhooks-lambda/node_modules/tabtab/.completions/slss.bash
-
-
-export PATH=$HOME/neovim/bin:$HOME/bin:$HOME/android-ndk/:$HOME/.local/bin:$PATH:$HOME/.gem/ruby/2.6.0/bin
-export SBT_OPTS="-Xmx1536M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
