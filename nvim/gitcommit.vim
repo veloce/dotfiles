@@ -1,13 +1,8 @@
-" Vincent Velociter 
+" Vincent Velociter
 " Special vimrc to launch vim for git commit as I don't like to wait ;)
-
-set nocompatible
-filetype plugin on
 syntax on
 
 set background=dark
-set t_Co=256
-colorscheme desert
 
 set nobackup
 set nowritebackup
