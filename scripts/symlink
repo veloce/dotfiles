@@ -27,7 +27,9 @@ link ctags ~/.ctags
 link redshift.conf ~/.config/redshift.conf
 link mplayer.conf ~/.mplayer/config
 link mpd ~/.mpd
+mkdir ~/.config/alacritty
 link editorconfig ~/.editorconfig
+link alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # scripts
 link scripts/fsize ~/bin/fsize
