@@ -5,6 +5,12 @@ nnoremap <leader>mb :Buffers<cr>
 nnoremap <leader>mg :GFiles<cr>
 nnoremap <leader>mf :Files<cr>
 
+" command-t
+let g:CommandTMaxHeight=20
+let g:CommandTMaxFiles=30000
+" grrr fix for command-t
+let g:CommandTWildIgnore=&wildignore . ",*/node_modules,*/build,*/cache,*/target"
+
 " airline
 let g:airline_theme='one'
 let g:airline#extensions#hunks#enabled = 0
@@ -55,11 +61,3 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " indents guides
 let g:indent_guides_guide_size = 1
-
-" typescript tools
-au BufRead,BufNewFile *.tsx set filetype=typescript
-let g:tsuquyomi_disable_default_mappings = 1
-let g:tsuquyomi_completion_detail = 1
-autocmd FileType typescript nmap <buffer> <Leader>s : <C-u>echo tsuquyomi#hint()<CR>
-autocmd FileType typescript nmap <buffer> <C-]> :TsuDefinition<CR>
-autocmd FileType typescript setlocal completeopt+=menu,preview
