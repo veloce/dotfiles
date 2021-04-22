@@ -1,5 +1,10 @@
 " PLUGINS SETTINGS
 
+" fzf
+nnoremap <leader>mb :Buffers<cr>
+nnoremap <leader>mg :GFiles<cr>
+nnoremap <leader>mf :Files<cr>
+
 " airline
 let g:airline_theme='one'
 let g:airline#extensions#hunks#enabled = 0
