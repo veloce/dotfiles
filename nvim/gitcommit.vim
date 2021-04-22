@@ -1,16 +1,19 @@
-" Vincent Velociter
-" Special vimrc to launch vim for git commit as I don't like to wait ;)
+call plug#begin(stdpath('data') . '/plugged-gitcommit')
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+call plug#end()
+
 syntax on
 
+colorscheme desert256
 set background=dark
 
 set nobackup
 set nowritebackup
 set noswapfile
 
-set number
 set laststatus=2
 set statusline=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
 
-map! jk 
-map! kj 
+set omnifunc=rhubarb#Complete
+set completeopt-=preview
