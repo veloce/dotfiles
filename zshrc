@@ -13,9 +13,9 @@ compinit
 # Set up the prompt (with git branch name)
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats 'on %b'
+zstyle ':vcs_info:git:*' formats '(%b)'
 setopt PROMPT_SUBST
-PROMPT='%m ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
+PROMPT='%m ${PWD/#$HOME/~}${vcs_info_msg_0_} > '
 
 # enable color support of ls and also add handy aliases
 hash dircolors 2>/dev/null && eval $(dircolors $HOME/.dotfiles/dircolors-solarized/dircolors.ansi-dark)
@@ -40,9 +40,9 @@ alias clisp='clisp -q -modern'
 alias p='python'
 alias chromedev='chromium --user-data-dir="$HOME/.chrome-dev"'
 alias sorteddu='du -sch .[!.]* * |sort -h'
-
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
 alias sqltags='ctags --languages=+SQL'
+alias sbtWroom='sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home'
 
 # git aliases
 alias g='git'
