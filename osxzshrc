@@ -8,15 +8,13 @@ alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 
 alias python='/usr/local/bin/python3'
 alias pip='/usr/local/bin/pip3'
 
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-# Set java version
-# https://www.kevinhooke.com/2017/10/05/switching-java-versions-on-mac-os/
-# alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`"
-j8
-
+jdk() {
+  version=$1
+  export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+  java -version
+}
 # vim: ft=sh

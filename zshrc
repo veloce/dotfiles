@@ -99,7 +99,7 @@ function vman()
 }
 
 if [ "$(uname)" = "Darwin" ]; then
-  source ~/.dotfiles/osxbashrc
+  source ~/.dotfiles/osxzshrc
 fi
 
 # Display a random adage each time bash is called
