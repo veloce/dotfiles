@@ -20,3 +20,5 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 nmap <silent> <C-]> <Plug>(coc-definition)
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
