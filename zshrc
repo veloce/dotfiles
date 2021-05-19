@@ -42,7 +42,7 @@ alias chromedev='chromium --user-data-dir="$HOME/.chrome-dev"'
 alias sorteddu='du -sch .[!.]* * |sort -h'
 alias pylibtags='ctags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`'
 alias sqltags='ctags --languages=+SQL'
-alias sbtWroom='sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home'
+
 
 # git aliases
 alias g='git'
@@ -52,6 +52,10 @@ alias gd='git diff'
 alias gc='git commit -v'
 alias gco='git checkout'
 alias gba='git branch -av'
+
+sbtWroom() {
+  sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+}
 
 # Custom docker ps
 docker() {
