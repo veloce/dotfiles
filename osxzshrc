@@ -18,5 +18,5 @@ jdk() {
   java -version
 }
 
-jdk 15
+jdk 17
 # vim: ft=sh
