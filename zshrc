@@ -109,9 +109,5 @@ fi
 # Display a random adage each time bash is called
 # hash fortune 2>/dev/null && hash cowsay 2>/dev/null && fortune | cowsay
 if hash cowsay 2>/dev/null; then
-  if ((RANDOM % 5 == 0)); then
-    python3 ~/.dotfiles/sgen/porn.py | cowsay
-  else
-    ~/.dotfiles/sgen/sgen.js | cowsay
-  fi
+  ~/.dotfiles/sgen/sgen.js | cowsay
 fi
