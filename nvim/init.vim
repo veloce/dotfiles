@@ -15,9 +15,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'wavded/vim-stylus'
-Plug 'wincent/command-t', {
-    \   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-    \ }
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 let g:loaded_python_provider=0
