@@ -1,5 +1,7 @@
 " Vincent Velociter - vimrc
 call plug#begin(stdpath('data') . '/plugged')
+Plug 'kana/vim-textobj-user'
+Plug 'sgur/vim-textobj-parameter'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
