@@ -1,5 +1,4 @@
 {
   "suggest.noselect": true,
-  "coc.preferences.formatOnSaveFiletypes":["dart"],
-  "dart.lineLength": 100
+  "coc.preferences.formatOnSaveFiletypes":["dart"]
 }
