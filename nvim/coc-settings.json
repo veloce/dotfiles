@@ -1,4 +1,6 @@
 {
   "suggest.noselect": true,
-  "coc.preferences.formatOnSaveFiletypes":["dart"]
+  "coc.preferences.formatOnSaveFiletypes":["dart"],
+  "flutter.autoOpenDevLog": true,
+  "flutter.autoHideDevLog": true
 }
