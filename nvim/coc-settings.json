@@ -2,5 +2,6 @@
   "suggest.noselect": true,
   "coc.preferences.formatOnSaveFiletypes":["dart"],
   "flutter.autoOpenDevLog": true,
-  "flutter.autoHideDevLog": true
+  "flutter.autoHideDevLog": true,
+  "flutter.provider.enableSnippet": true
 }
