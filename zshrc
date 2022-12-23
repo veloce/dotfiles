@@ -53,10 +53,6 @@ alias gc='git commit -v'
 alias gco='git checkout'
 alias gba='git branch -av'
 
-sbtWroom() {
-  sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-}
-
 # Custom docker ps
 docker() {
     if [[ $@ == "ps" ]]; then

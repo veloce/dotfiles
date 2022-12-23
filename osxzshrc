@@ -8,7 +8,7 @@ alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 
 alias python='/usr/local/bin/python3'
 alias pip='/usr/local/bin/pip3'
 
-alias workingEmulator='~/Library/Android/sdk/tools/emulator -avd Pixel_3a_API_31_arm64-v8a -dns-server 1.1.1.1'
+alias workingEmulator='~/Library/Android/sdk/emulator/emulator -avd Pixel_3a_API_33_arm64-v8a -no-snapshot-load -no-snapstorage -no-snapshot -no-snapshot-save -dns-server 1.1.1.1'
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
@@ -20,6 +20,4 @@ jdk() {
   java -version
 }
 
-export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 # vim: ft=sh
