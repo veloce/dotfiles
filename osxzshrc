@@ -5,8 +5,6 @@ alias vim='nvim'
 alias lvim='nvim -c "set bg=light"'
 alias tmux="TERM=screen-256color-bce tmux"
 alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=$HOME/.chrome_dev'
-alias python=`which python3`
-alias pip='/usr/local/bin/pip3'
 
 alias workingEmulator='~/Library/Android/sdk/emulator/emulator -avd Pixel_3a_API_33_arm64-v8a -no-snapshot-load -no-snapstorage -no-snapshot -no-snapshot-save -dns-server 1.1.1.1'
 
