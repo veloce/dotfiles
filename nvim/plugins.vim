@@ -65,3 +65,5 @@ let g:indent_guides_guide_size = 1
 " dart
 highlight link dartSdkClass Normal
 highlight link dartUserType Normal
+highlight link CocInlayHintParameter Comment
+highlight link CocInlayHintType Comment
