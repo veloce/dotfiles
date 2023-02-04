@@ -27,8 +27,8 @@ set scrolloff=5                       " context around cursor
 set showcmd                           " Show partial commands in the last line of the screen
 set showmode
 set smartcase                         " case-sensitive search if expression contains a capital letter.
-set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
-set statusline=%{fugitive#statusline()}
+" set statusline+=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
+" set statusline=%{fugitive#statusline()}
 set tags+=vendor.tags
 set wildignore=.git,*.py[co],*.class,*.obj,*.o,*.so,*.hi,tags,*/cache*/*,*/logs/*,*/target*/*,*/dist/*,*/node_modules/*,*/build/*,*/i18n/*,*/locale/*,*/compiled/*,*/public/*
 set wildmenu                          " Better command-line completion

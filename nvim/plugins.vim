@@ -48,6 +48,15 @@ let g:airline_mode_map = {
     \ ''     : 'V',
     \ }
 
+function! MetalsStatus() abort
+  return get(g:, 'metals_status', '')
+endfunction
+
+function! AirlineInit()
+  let g:airline_section_x = airline#section#create(['%{MetalsStatus()}', ' ', 'filetype'])
+endfunction
+autocmd User AirlineAfterInit call AirlineInit()
+
 " pasta
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'haskell', 'behat']
 
