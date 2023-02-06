@@ -1,6 +1,7 @@
 " Vincent Velociter - vimrc
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release', 'for': ['typescript', 'dart'] }
@@ -10,7 +11,6 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'rakr/vim-one'
 Plug 'scalameta/nvim-metals'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'tpope/vim-commentary'
@@ -33,6 +33,7 @@ source ~/.dotfiles/nvim/commands.vim
 source ~/.dotfiles/nvim/mappings.vim
 source ~/.dotfiles/nvim/coc.vim
 
+lua require('colorscheme')
 lua require('lsp')
 lua require('plugins.lualine')
 lua require('plugins.metals')

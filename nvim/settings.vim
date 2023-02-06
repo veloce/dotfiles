@@ -1,7 +1,4 @@
 set termguicolors
-let g:one_allow_italics = 1
-colorscheme one
-set background=dark
 
 set autoread
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
