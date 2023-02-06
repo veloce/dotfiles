@@ -13,6 +13,7 @@ require("flutter-tools").setup{
   lsp = {
     color = {
       enabled = true
-    }
+    },
+    on_attach = require("lsp-format").on_attach,
   },
 }

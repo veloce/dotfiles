@@ -1,10 +1,10 @@
-" Vincent Velociter - vimrc
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'akinsho/flutter-tools.nvim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim'
+Plug 'lukas-reineke/lsp-format.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }

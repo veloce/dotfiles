@@ -27,3 +27,6 @@ map("n", "<space>q", vim.diagnostic.setqflist)
 -- map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>")
 map("n", "[c", vim.diagnostic.goto_prev)
 map("n", "]c", vim.diagnostic.goto_next)
+
+-- must pass then the on_attach function to each lsp config that should format
+require("lsp-format").setup {}
