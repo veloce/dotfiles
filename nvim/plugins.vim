@@ -1,16 +1,5 @@
 " PLUGINS SETTINGS
 
-" fzf
-nnoremap <leader>mb :Buffers<cr>
-nnoremap <leader>mg :GFiles<cr>
-nnoremap <leader>mf :Files<cr>
-
-" command-t
-let g:CommandTMaxHeight=20
-let g:CommandTMaxFiles=30000
-" grrr fix for command-t
-let g:CommandTWildIgnore=&wildignore . ",*/node_modules,*/build,*/cache,*/target"
-
 " airline
 let g:airline_theme='one'
 let g:airline#extensions#hunks#enabled = 0
