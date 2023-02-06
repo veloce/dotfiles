@@ -5,8 +5,10 @@ Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release', 'for': ['typescript', 'dart'] }
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'rakr/vim-one'
 Plug 'scalameta/nvim-metals'
@@ -19,7 +21,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'vim-airline/vim-airline'
 Plug 'wavded/vim-stylus'
 call plug#end()
 
@@ -33,5 +34,6 @@ source ~/.dotfiles/nvim/mappings.vim
 source ~/.dotfiles/nvim/coc.vim
 
 lua require('lsp')
+lua require('plugins.lualine')
 lua require('plugins.metals')
 lua require('plugins.telescope')
