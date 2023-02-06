@@ -1,10 +1,10 @@
 " Vincent Velociter - vimrc
 call plug#begin(stdpath('data') . '/plugged')
+Plug 'akinsho/flutter-tools.nvim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release', 'for': ['typescript', 'dart'] }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -31,10 +31,12 @@ source ~/.dotfiles/nvim/settings.vim
 source ~/.dotfiles/nvim/plugins.vim
 source ~/.dotfiles/nvim/commands.vim
 source ~/.dotfiles/nvim/mappings.vim
-source ~/.dotfiles/nvim/coc.vim
 
-lua require('colorscheme')
-lua require('lsp')
-lua require('plugins.lualine')
-lua require('plugins.metals')
-lua require('plugins.telescope')
+lua << EOF
+  require('colorscheme')
+  require('lsp')
+  require('plugins.flutter')
+  require('plugins.lualine')
+  require('plugins.metals')
+  require('plugins.telescope')
+EOF
