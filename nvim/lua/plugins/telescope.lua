@@ -22,8 +22,8 @@ tel.setup {
   defaults = {
     mappings = {
       i = {
-        -- ["<C-b>"] = "move_selection_previous",
-        -- ["<esc>"] = "close",
+        ["<C-n>"] = "move_selection_previous",
+        ["<esc>"] = "close",
       }
     },
   },

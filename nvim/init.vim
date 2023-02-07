@@ -1,7 +1,13 @@
 call plug#begin(stdpath('data') . '/plugged')
+Plug 'L3MON4D3/LuaSnip', {'tag': 'v1.*', 'do': 'make install_jsregexp'}
 Plug 'akinsho/flutter-tools.nvim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'kana/vim-textobj-user'
 Plug 'leafgarland/typescript-vim'
 Plug 'lukas-reineke/lsp-format.nvim'
@@ -35,6 +41,7 @@ source ~/.dotfiles/nvim/mappings.vim
 lua << EOF
   require('colorscheme')
   require('lsp')
+  require('plugins.cmp')
   require('plugins.flutter')
   require('plugins.lualine')
   require('plugins.metals')
