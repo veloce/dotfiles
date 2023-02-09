@@ -40,7 +40,11 @@ tel.setup {
         -- even more opts
       }
     }
-  }
+  },
+  dev_log = {
+    enabled = true,
+    open_cmd = "vsplit", -- command to use to open the log buffer
+  },
 }
 
 tel.load_extension('fzf')

@@ -17,6 +17,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'scalameta/nvim-metals'
 Plug 'sgur/vim-textobj-parameter'
@@ -47,4 +48,5 @@ lua << EOF
   require('plugins.lualine')
   require('plugins.metals')
   require('plugins.telescope')
+  require('plugins.treesitter')
 EOF

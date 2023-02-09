@@ -69,7 +69,7 @@ nmap <C-h> ylvl"=system('php -r ' . shellescape("echo htmlentities('<C-R>"', ENT
 nmap <leader>vg :vimgrep /<C-R>// `git ls-files`<CR>:cw<CR>
 
 " flutter shortcuts
-nmap <leader>fr :CocCommand flutter.run --dart-define=LICHESS_HOST=http://l.org
-nmap <leader>hr :CocCommand flutter.dev.hotRestart<CR>
-nmap <leader>fq :CocCommand flutter.dev.quit<CR>
-nmap <leader>fd :CocCommand flutter.devices<CR>
+" nmap <leader>fr :CocCommand flutter.run --dart-define=LICHESS_HOST=http://l.org
+" nmap <leader>hr :CocCommand flutter.dev.hotRestart<CR>
+" nmap <leader>fq :CocCommand flutter.dev.quit<CR>
+" nmap <leader>fd :CocCommand flutter.devices<CR>
