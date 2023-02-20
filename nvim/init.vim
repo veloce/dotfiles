@@ -48,5 +48,5 @@ lua << EOF
   require('plugins.lualine')
   require('plugins.metals')
   require('plugins.telescope')
-  require('plugins.treesitter')
+  -- require('plugins.treesitter')
 EOF

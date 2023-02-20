@@ -48,5 +48,5 @@ tel.setup {
 }
 
 tel.load_extension('fzf')
-tel.load_extension('flutter')
+-- tel.load_extension('flutter')
 tel.load_extension('ui-select')
