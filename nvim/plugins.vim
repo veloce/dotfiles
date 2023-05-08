@@ -13,3 +13,8 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " indents guides
 let g:indent_guides_guide_size = 1
+
+" Copilot
+
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true

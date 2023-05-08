@@ -1,3 +1,11 @@
+-- require("catppuccin").setup({
+--   flavour = "machiatto",
+--   background = { -- :h background
+--       light = "latte",
+--       dark = "macchiato",
+--   },
+-- })
+
 require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings

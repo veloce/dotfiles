@@ -31,7 +31,7 @@ cmap <C-a> Tab /^[^:]*:\zs
 nmap <leader>lr :e <C-R>=expand("%:p:h") . "/"<CR><C-D>
 nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>sa :saveas <C-R>=expand("%:p:h") . "/" <CR>
-nmap <leader>rn :Rename <C-R>=expand("%:p:h") . "/" <CR>
+nmap <leader>frn :Rename <C-R>=expand("%:p:h") . "/" <CR>
 nmap <leader>mk :!mkdir <C-R>=expand("%:p:h") . "/" <CR>
 cnoremap %% <C-R>=expand("%:h")."/"<CR>
 
